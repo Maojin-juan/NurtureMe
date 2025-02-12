@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-sans;
+  }
+
+  body {
+    @apply min-h-screen;
+  }
+}
+@layer components {
+  /* navbarList */
+  .nav-link {
+    @apply relative block px-6 py-3 transition-all hover:text-white xl:py-3.5;
+  }
+  .nav-link::after {
+    @apply absolute bottom-2.5 left-0 h-[7px] w-full bg-baseline bg-contain bg-center bg-no-repeat opacity-0 transition-all content-[''] hover:opacity-100 xl:h-2.5;
+  }
+
+  /* pseudo-elements */
+  .afterDecoration {
+    @apply after:absolute after:bg-no-repeat;
+  }
+  .beforeDecoration {
+    @apply before:absolute before:bg-no-repeat;
+  }
+
+  /* indexSwiper */
+  .teamSwiper .swiper-pagination-bullet,
+  .storySwiper .swiper-pagination-bullet {
+    @apply size-2 bg-primary-3 xl:!mx-2 xl:size-4;
+  }
+
+  /* adoptionSwiper */
+  .swiperAdoption .swiper-pagination-bullet,
+  .swiper-mobile .swiper-pagination-bullet {
+    @apply size-2 bg-primary-3 xl:size-4;
+  }
+
+  .swiperAdoption .swiper-button-next {
+    @apply hidden size-20 lg:block xl:right-[15%];
+  }
+
+  .swiperAdoption .swiper-button-prev {
+    @apply hidden size-20 lg:block xl:left-[15%];
+  }
+
+  .swiperAdoption .swiper-button-next::after,
+  .swiperAdoption .swiper-button-prev::after {
+    @apply hidden;
+  }
+}
+
+@layer utilities {
+  /* transition */
+  .transition-burger {
+    transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* 漢堡選單動畫 */
+  .hamburgerIcon {
+    @apply transition-burger relative h-0.5 w-6 bg-white;
+  }
+
+  .hamburgerIcon::before,
+  .hamburgerIcon::after {
+    @apply absolute left-0 h-0.5 w-full bg-white content-[''];
+    transition: inherit;
+  }
+
+  .hamburgerIcon::before {
+    @apply -translate-y-[9px];
+  }
+  .hamburgerIcon::after {
+    @apply translate-y-[9px];
+  }
+
+  /* 開啟狀態 */
+  .hamburgerOpen {
+    @apply translate-x-7 bg-transparent;
+  }
+
+  .hamburgerOpen::before {
+    @apply -translate-x-7 translate-y-0 rotate-[135deg];
+  }
+  .hamburgerOpen::after {
+    @apply -translate-x-7 translate-y-0 -rotate-[135deg];
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+}
