@@ -105,6 +105,8 @@ export default {
           ...Object.entries({
             titlePaw: "url('@/assets/decorations/paw/titlePaw.svg')",
             underline: "url('@/assets/decorations/underline/underline.svg')",
+            underline1: "url('@/assets/decorations/underline/underline1.svg')",
+            underline2: "url('@/assets/decorations/underline/underline2.svg')",
             baseline: "url('@/assets/decorations/menu/baseline.svg')",
             paw1: "url('@/assets/decorations/paw/paw1.svg')",
             paw2: "url('@/assets/decorations/paw/paw2.svg')",

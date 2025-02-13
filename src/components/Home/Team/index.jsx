@@ -9,6 +9,7 @@ function TeamContent() {
         title="我們的團隊"
         subtitle="致力於為毛孩子們提供最好的照顧和無限的愛"
         className="text-secondary-2"
+        underlineStyle={2}
       />
     </div>
   );
