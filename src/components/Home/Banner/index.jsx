@@ -38,7 +38,7 @@ function BannerDescription() {
 export default function Banner() {
   return (
     <div className="flex flex-col items-center justify-center gap-x-[61px] overflow-x-hidden py-10 md:flex-row-reverse md:px-8 xl:pb-[138px] xl:pt-[272px] 2xl:px-20">
-      <div className="afterDecoration relative z-10 flex items-center after:-top-6 after:left-2 after:-z-10 after:h-[396px] after:w-[368px] after:bg-bgShadow after:bg-cover md:px-0 2xl:h-[670px] 2xl:w-[680px] after:2xl:-top-8 after:2xl:left-[27px] after:2xl:h-[808px] after:2xl:w-[750px]">
+      <div className="afterDecoration after:bg-shadow1 relative z-10 flex items-center after:-top-6 after:left-2 after:-z-10 after:h-[396px] after:w-[368px] after:bg-cover md:px-0 2xl:h-[670px] 2xl:w-[680px] after:2xl:-top-8 after:2xl:left-[27px] after:2xl:h-[808px] after:2xl:w-[750px]">
         <img
           className="h-auto w-full"
           src={IMAGES.BANNERS.BANNER_CAT}

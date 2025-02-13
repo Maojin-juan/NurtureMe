@@ -106,13 +106,19 @@ export default {
             titlePaw: "url('@/assets/decorations/paw/titlePaw.svg')",
             underline: "url('@/assets/decorations/underline/underline.svg')",
             baseline: "url('@/assets/decorations/menu/baseline.svg')",
-            bgShadow: "url('@/assets/decorations/bgShadow/bgShadow.svg')",
+            paw1: "url('@/assets/decorations/paw/paw1.svg')",
+            paw2: "url('@/assets/decorations/paw/paw2.svg')",
+            headerWave: "url('@/assets/decorations/wave/headerWave.svg')",
+            hand: "url('@/assets/decorations/guardianHero/hand.svg')",
+            catPaws: "url('@/assets/decorations/guardianHero/catPaws.svg')",
+            arrowPrev: "url('@/assets/decorations/arrow/arrowPrev.svg')",
+            arrowNext: "url('@/assets/decorations/arrow/arrowNext.svg')",
           }),
 
-          // 波浪背景
-          ...Array.from({ length: 5 }, (_, i) => [
-            `wave${i + 1}`,
-            `url('@/assets/decorations/wave/wave${i + 1}.svg')`,
+          // 背景陰影
+          ...Array.from({ length: 3 }, (_, i) => [
+            `shadow${i + 1}`,
+            `url('@/assets/decorations/bgShadow/bgShadow${i + 1}.svg')`,
           ]),
 
           // 人物插圖

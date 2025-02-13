@@ -1,14 +1,15 @@
+import IMAGES from "@/assets/images";
 import SectionTitle from "@/components/common/SectionTitle";
 
 const features = [
   {
-    image: "/assets/images/index/rupixen-Q59HmzK38eQ-unsplash.jpg",
+    image: IMAGES.FEATURES.ONLINE_SPONSOR,
     title: "線上贊助",
     description:
       "選擇你心儀的毛孩子,每月收到牠們的生活更新和可愛照片，感受到牠們的成長與變化。",
   },
   {
-    image: "/assets/images/index/yerlin-matu-GtwiBmtJvaU-unsplash.jpg",
+    image: IMAGES.FEATURES.INTERACT,
     title: "現場互動",
     description: "與贊助對象零距離互動，給牠們帶來更多的歡樂和陪伴。",
   },
@@ -34,9 +35,10 @@ function FeatureCard({ image, title, description }) {
 
 export default function Features() {
   return (
-    <section className="relative z-10 overflow-x-hidden">
-      <div className="beforeDecoration afterDecoration relative py-10 before:left-[95px] before:top-[39px] before:-z-10 before:w-[281px] before:bg-contain after:-right-[99px] after:bottom-[190px] after:-z-10 after:h-[270px] after:w-[300px] after:bg-[url('/assets/svg/bgShadow/bgShadow1.svg')] after:bg-contain xl:py-[120px] before:xl:h-[925px] before:xl:bg-[url('/assets/svg/paw/paw1.svg')] after:2xl:-bottom-[220px] after:2xl:-right-[225px] after:2xl:h-[670px] after:2xl:w-[770px]">
-        <div className="beforeDecoration container relative before:-bottom-[90px] before:-right-[208px] before:z-10 before:h-[355px] before:w-[294px] before:3xl:bg-[url('/assets/svg/illust/person1.svg')]">
+    <>
+      <img src={IMAGES.WAVE.WAVE1} alt="wave1" />
+      <div className="beforeDecoration afterDecoration before:xl:bg-paw1 after:bg-shadow2 relative py-10 before:left-[95px] before:top-[39px] before:-z-10 before:w-[281px] before:bg-contain after:-right-[99px] after:bottom-[190px] after:-z-10 after:h-[270px] after:w-[300px] after:bg-contain xl:py-[120px] before:xl:h-[925px] after:2xl:-bottom-[220px] after:2xl:-right-[225px] after:2xl:h-[670px] after:2xl:w-[770px]">
+        <div className="beforeDecoration container relative before:-bottom-[90px] before:-right-[208px] before:z-10 before:h-[355px] before:w-[294px] before:3xl:bg-person1">
           <SectionTitle
             title="改變生活，從心開始"
             subtitle="讓每個人都能參與到保護毛孩子的行動中來是我們的使命"
@@ -49,6 +51,6 @@ export default function Features() {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }

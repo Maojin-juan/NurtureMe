@@ -21,7 +21,7 @@ export default function Header() {
     <header
       className={`left-0 top-0 z-50 w-full transition-all duration-300 ${isSticky ? "fixed" : "relative"} xl:fixed`}
     >
-      <div className="bg-primary-1 bg-wave1 bg-cover bg-no-repeat xl:bg-transparent">
+      <div className="bg-headerWave bg-primary-1 bg-cover bg-no-repeat xl:bg-transparent">
         <Navbar />
       </div>
     </header>
