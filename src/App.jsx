@@ -1,6 +1,6 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import Layout from "@/components/Layout";
+import Layout from "@/components/Layout/ClientLayout";
 import Home from "./pages/Home";
 import { Provider } from "react-redux";
 import store from "./store/store";
