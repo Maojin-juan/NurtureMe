@@ -17,8 +17,11 @@ export default function Home() {
         <Banner />
       </main>
 
-      <Features />
-      <Team />
+      <section className="relative z-10 overflow-x-hidden">
+        <Features />
+        <Team />
+      </section>
+
       <Story />
       <GuardianHero />
     </>
