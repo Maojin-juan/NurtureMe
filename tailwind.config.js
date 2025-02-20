@@ -49,12 +49,16 @@ const colors = {
     2: "#3E4D9C",
     3: "#7782B8",
     4: "#C3C8E1",
+    5: "#E7E9F2",
   },
   secondary: {
     DEFAULT: "#EF4323",
     1: "#EF4323",
     2: "#F26348",
     3: "#F6927F",
+  },
+  grey: {
+    2: "#6D6D6D",
   },
   highlight: {
     DEFAULT: "#FFEE75",
@@ -103,6 +107,7 @@ export default {
         ...Object.fromEntries([
           // 裝飾元素
           ...Object.entries({
+            // 裝飾 decorations
             titlePaw: "url('@/assets/decorations/paw/titlePaw.svg')",
             underline: "url('@/assets/decorations/underline/underline.svg')",
             underline1: "url('@/assets/decorations/underline/underline1.svg')",
@@ -110,24 +115,23 @@ export default {
             baseline: "url('@/assets/decorations/menu/baseline.svg')",
             paw1: "url('@/assets/decorations/paw/paw1.svg')",
             paw2: "url('@/assets/decorations/paw/paw2.svg')",
-            headerWave: "url('@/assets/decorations/wave/headerWave.svg')",
             hand: "url('@/assets/decorations/guardianHero/hand.svg')",
             catPaws: "url('@/assets/decorations/guardianHero/catPaws.svg')",
             arrowPrev: "url('@/assets/decorations/arrow/arrowPrev.svg')",
             arrowNext: "url('@/assets/decorations/arrow/arrowNext.svg')",
+            aboutAdopt: "url('@/assets/images/about/support/aboutAdopt.svg')",
           }),
-
-          // 背景陰影
-          ...Array.from({ length: 3 }, (_, i) => [
-            `shadow${i + 1}`,
-            `url('@/assets/decorations/bgShadow/bgShadow${i + 1}.svg')`,
-          ]),
 
           // 人物插圖
           ...Array.from({ length: 4 }, (_, i) => [
             `person${i + 1}`,
             `url('@/assets/decorations/illust/person${i + 1}.svg')`,
           ]),
+
+          // 關於我們
+          ...Object.entries({
+            aboutBanner: "url('@/assets/decorations/about/aboutBanner.jpg')",
+          }),
 
           // 捐贈頁面
           ...Object.entries({

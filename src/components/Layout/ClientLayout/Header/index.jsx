@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
+import { Wave1 } from "@/components/decorations";
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -21,7 +22,8 @@ export default function Header() {
     <header
       className={`left-0 top-0 z-50 w-full transition-all duration-300 ${isSticky ? "fixed" : "relative"} xl:fixed`}
     >
-      <div className="bg-headerWave bg-primary-1 bg-cover bg-no-repeat xl:bg-transparent">
+      <div className="bg-primary-1 xl:bg-transparent">
+        <Wave1 className="top-0 -z-10 hidden !h-full text-primary-1 xl:block" />
         <Navbar />
       </div>
     </header>

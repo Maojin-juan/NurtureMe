@@ -1,6 +1,6 @@
 import SectionTitle from "@/components/common/SectionTitle";
 import TeamSwiper from "./TeamSwiper";
-import IMAGES from "@/assets/images";
+import { Wave3 } from "@/components/decorations";
 
 function TeamContent() {
   return (
@@ -30,20 +30,12 @@ function TeamDescription() {
   );
 }
 
-function WaveBottom() {
-  return (
-    <div className="absolute bottom-0 left-0 w-full">
-      <img className="w-full" src={IMAGES.WAVE.WAVE2} alt="wave2" />
-    </div>
-  );
-}
-
 export default function Team() {
   return (
-    <div className="beforeDecoration afterDecoration before:bg-shadow3 after:xl:bg-paw2 relative overflow-hidden py-10 before:-left-[126px] before:bottom-[238px] before:-z-10 before:h-80 before:w-[340px] before:bg-contain after:-top-[7px] after:right-[143px] after:bg-contain xl:py-[120px] before:xl:-left-[307px] before:xl:top-[486px] before:xl:h-[742px] before:xl:w-[788px] after:xl:h-[825px] after:xl:w-[1157px]">
+    <div className="beforeDecoration afterDecoration relative overflow-hidden py-10 before:-left-[126px] before:bottom-[238px] before:-z-10 before:h-80 before:w-[340px] before:bg-shadow3 before:bg-contain after:-top-[7px] after:right-[143px] after:-z-10 after:bg-contain xl:py-[120px] before:xl:-left-[307px] before:xl:top-[486px] before:xl:h-[742px] before:xl:w-[788px] after:xl:h-[825px] after:xl:w-[1157px] after:xl:bg-paw2">
       <TeamContent />
       <TeamDescription />
-      <WaveBottom />
+      <Wave3 className="-bottom-0.5 text-primary-1" />
     </div>
   );
 }

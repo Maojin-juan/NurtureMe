@@ -16,11 +16,14 @@ import storyStartup from "@/assets/images/index/12photostory-BLaXAI922FI-unsplas
 import storyGrow from "@/assets/images/index/bayu-prayuda-4ZVqqDAZD2o-unsplash.jpg";
 import storyOnline from "@/assets/images/index/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg";
 
-/* WAVE */
-import wave1 from "@/assets/images/wave/wave1.svg";
-import wave2 from "@/assets/images/wave/wave2.svg";
-import wave3 from "@/assets/images/wave/wave3.svg";
-import wave4 from "@/assets/images/wave/wave4.svg";
+/* ABOUT */
+import aboutStory1 from "@/assets/images/about/story/aboutStory1.jpg";
+import aboutStory2 from "@/assets/images/about/story/aboutStory2.jpg";
+import aboutStory3 from "@/assets/images/about/story/aboutStory3.jpg";
+import aboutStory4 from "@/assets/images/about/story/aboutStory4.jpg";
+import aboutSupport from "@/assets/images/about/support/aboutSupport.png";
+import aboutAdopt from "@/assets/images/about/support/aboutAdopt.svg";
+import aboutSupportHover from "@/assets/images/about/support/aboutSupportHover.svg";
 
 /* ICONS */
 import logoWhite from "@/assets/images/icons/logo/logoWhite.svg";
@@ -52,11 +55,14 @@ export const IMAGES = {
     ONLINE: storyOnline,
   },
 
-  WAVE: {
-    WAVE1: wave1,
-    WAVE2: wave2,
-    WAVE3: wave3,
-    WAVE4: wave4,
+  ABOUT: {
+    ABOUT_STORY1: aboutStory1,
+    ABOUT_STORY2: aboutStory2,
+    ABOUT_STORY3: aboutStory3,
+    ABOUT_STORY4: aboutStory4,
+    ABOUT_SUPPORT: aboutSupport,
+    ABOUT_ADOPT: aboutAdopt,
+    ABOUT_SUPPORT_HOVER: aboutSupportHover,
   },
 
   PETS: {
