@@ -20,9 +20,7 @@ export default function SectionTitle({
       >
         {title}
       </h4>
-      <p className="font-bold leading-[1.2rem] tracking-[0.04rem] xl:text-h5">
-        {subtitle}
-      </p>
+      <p className="text-h8 xl:text-h5">{subtitle}</p>
     </div>
   );
 }

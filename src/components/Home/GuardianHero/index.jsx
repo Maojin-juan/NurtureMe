@@ -1,10 +1,10 @@
+import { Wave2, Wave4 } from "@/components/decorations";
+
 function GuardianHeroTitle() {
   return (
     <>
       <h4 className="text-h4 2xl:text-h1">成為毛孩子的守護英雄</h4>
-      <p className="font-bold leading-[1.2rem] tracking-[0.04rem] 2xl:text-h4">
-        想要成為毛孩子的守護英雄嗎？
-      </p>
+      <p className="text-h8 2xl:text-h4">想要成為毛孩子的守護英雄嗎？</p>
     </>
   );
 }
@@ -12,9 +12,11 @@ function GuardianHeroTitle() {
 export default function GuardianHero() {
   return (
     <section className="relative">
-      <div className="afterDecoration beforeDecoration before:bg-hand after:bg-catPaws relative space-y-2 pb-[359px] pt-10 text-center text-primary-1 before:-top-[66px] before:left-1/2 before:-z-10 before:h-[358px] before:w-[120px] before:-translate-x-1/2 before:bg-contain after:bottom-0 after:left-1/2 after:-z-10 after:h-[88px] after:w-[346px] after:-translate-x-1/2 after:bg-contain after:xl:h-[165px] after:xl:w-[656px] 2xl:space-y-6 2xl:pb-[781px] 2xl:pt-20 before:2xl:-top-[140px] before:2xl:h-[716px] before:2xl:w-[240px] after:2xl:h-[330px] after:2xl:w-[1312px]">
-        <GuardianHeroTitle />
+      <Wave2 className="top-0 text-primary-1" />
+      <div className="afterDecoration beforeDecoration relative space-y-2 overflow-hidden pb-[359px] pt-10 text-center text-primary-1 before:-top-[66px] before:left-1/2 before:-z-10 before:h-[358px] before:w-[120px] before:-translate-x-1/2 before:bg-hand before:bg-contain after:bottom-0 after:left-1/2 after:-z-10 after:h-[88px] after:w-[346px] after:-translate-x-1/2 after:bg-catPaws after:bg-contain after:xl:h-[165px] after:xl:w-[656px] 2xl:space-y-6 2xl:pb-[781px] 2xl:pt-20 before:2xl:-top-[140px] before:2xl:h-[716px] before:2xl:w-[240px] after:2xl:h-[330px] after:2xl:w-[1312px]">
+        <GuardianHeroTitle className="pt-10 xl:pt-20" />
       </div>
+      <Wave4 className="-bottom-0.5 text-primary-1" />
     </section>
   );
 }

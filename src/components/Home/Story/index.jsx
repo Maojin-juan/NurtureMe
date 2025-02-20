@@ -5,7 +5,7 @@ function StoryContent() {
   return (
     <div className="text-center text-white">
       <h4 className="text-h4 xl:text-h2">夢想起飛的旅程</h4>
-      <p className="font-bold leading-[1.2rem] tracking-[0.04rem] xl:text-h4">
+      <p className="text-h8 xl:text-h4">
         浪我包養的故事從一個簡單的夢想開始...
       </p>
     </div>

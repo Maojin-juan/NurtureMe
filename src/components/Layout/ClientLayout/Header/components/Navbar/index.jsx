@@ -53,8 +53,8 @@ const Navbar = () => {
     <>
       <nav className="flex justify-between bg-primary-1 bg-cover bg-no-repeat px-3 py-2 lg:container xl:bg-transparent">
         <Logo />
-        <div className="flex items-center gap-x-2 xl:gap-x-0">
-          <NavList className="hidden items-center gap-x-4 text-right font-bold leading-[1.2rem] text-primary-4 xl:flex xl:text-xl xl:leading-6" />
+        <div className="flex items-center gap-x-2 xl:gap-x-4">
+          <NavList className="hidden items-center gap-x-4 text-right text-h8 text-primary-4 xl:flex xl:text-h7" />
           <CartIcon />
           <HamburgerButton isOpen={isMenuOpen} onClick={toggleMenu} />
         </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
         className="transition-burger overflow-hidden bg-primary-1 xl:hidden"
       >
         <NavList
-          className="container flex flex-col items-end font-bold leading-[1.2rem] text-primary-4"
+          className="container flex flex-col items-end font-bold text-primary-4"
           onClick={toggleMenu}
         />
       </div>

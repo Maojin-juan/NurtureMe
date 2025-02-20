@@ -4,20 +4,20 @@ export default function Footer() {
   return (
     <footer className="z-0 mt-auto bg-primary-1">
       <div
-        className={`afterDecoration after:xl:bg-person4 relative overflow-y-hidden py-10 after:-bottom-[63px] after:right-[86px] after:h-[339px] after:w-[211px] xl:py-20`}
+        className={`afterDecoration relative overflow-y-hidden py-10 after:-bottom-[63px] after:right-[86px] after:h-[339px] after:w-[211px] xl:py-20 after:xl:bg-person4`}
       >
         <div className="flex flex-col gap-y-10 lg:container lg:flex-row-reverse lg:justify-between">
           <div className="flex flex-col items-center gap-y-4 px-[27.5px] lg:items-end lg:px-0">
-            <label className="flex text-xl" htmlFor="subscribe">
+            <label className="flex" htmlFor="subscribe">
               <input
-                className="w-full max-w-[328px] rounded-s-2xl px-6 py-[13px] leading-[30px]"
+                className="w-full max-w-[328px] rounded-s-2xl px-6 py-[13px] text-fs-5"
                 type="e-mail"
-                placeholder="輸入您的電子郵件"
+                placeholder="您的電子郵件"
                 id="subscribe"
                 name="subscribe"
               />
               <input
-                className="rounded-e-2xl bg-secondary-1 px-6 py-4 font-bold leading-6 text-white"
+                className="rounded-e-2xl bg-secondary-1 px-6 py-4 text-h7 text-white"
                 type="button"
                 value="訂閱"
                 name="subscribeButton"
@@ -28,10 +28,10 @@ export default function Footer() {
               <p>流浪不再</p>
             </div>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-6 px-[27.5px]">
             <a href="/index.html">
               <img
-                className="mx-auto h-16"
+                className="mx-auto h-16 px-10"
                 src={IMAGES.ICONS.LOGO}
                 alt="FooterLogo"
               />
@@ -50,7 +50,7 @@ export default function Footer() {
               </address>
             </div>
             <div className="flex flex-col items-center justify-center gap-y-4">
-              <p className="font-bold leading-[1.2rem] text-white">追蹤我們</p>
+              <p className="text-h8 text-white xl:text-h6">追蹤我們</p>
               <div className="flex gap-x-4">
                 <a href="#">
                   <img src={IMAGES.ICONS.SOCIAL.FACEBOOK} alt="FacebookLink" />
