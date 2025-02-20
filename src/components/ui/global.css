@@ -96,4 +96,8 @@
     writing-mode: vertical-rl;
     text-orientation: upright;
   }
+
+  .fundStatus {
+    @apply flex items-center before:block before:size-3 before:rounded-full before:xl:mr-4 before:xl:size-8;
+  }
 }
