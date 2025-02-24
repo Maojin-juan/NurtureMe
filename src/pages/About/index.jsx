@@ -1,7 +1,13 @@
 import { Helmet } from "react-helmet-async";
-import IMAGES from "@/assets/images";
+import ASSETS from "@/assets";
 import { Link } from "react-router-dom";
-import { BlobShape, Wave2, Wave3, Wave4 } from "@/components/decorations";
+import {
+  BlobShape,
+  PawsCol,
+  Wave2,
+  Wave3,
+  Wave4,
+} from "@/components/decorative";
 
 export default function About() {
   const financialData = [
@@ -71,29 +77,37 @@ export default function About() {
       </Helmet>
 
       <section className="relative">
-        <div className="-mt-[60px] h-[200px] w-full bg-aboutBanner bg-cover bg-center bg-no-repeat after:absolute after:inset-0 after:bg-primary-1 after:bg-opacity-30 xl:h-[480px]">
-          <div className="container flex h-full items-end pb-12 xl:items-center">
-            <h3 className="z-10 text-h5 font-bold text-white xl:text-heading">
+        <div className="absolute inset-0">
+          <div className="h-full w-full bg-aboutBanner bg-cover bg-center bg-no-repeat" />
+          <div className="absolute inset-0 bg-primary-1 bg-opacity-30" />
+        </div>
+
+        <div className="relative -mt-[60px]">
+          <div className="container">
+            <h3 className="pb-12 pt-[118px] text-h5 font-bold text-white md:pb-40 md:pt-[224px] md:text-heading">
               關於我們
             </h3>
           </div>
         </div>
+
         <Wave3 className="-bottom-0.5 z-10 text-white" />
       </section>
 
       <main className="relative py-10 xl:pb-[120px] xl:pt-20">
+        <PawsCol className="left-[60px] top-[220px] hidden xl:block" />
+
         <div className="px-3 xl:container">
-          <div className="mb-6 xl:mb-10">
+          <div className="beforeDecoration textHighlight mb-6 space-y-2 ps-4 before:bg-highlight xl:mb-10 xl:space-y-4 xl:ps-11">
             <h4 className="mb-2 text-h6 font-bold text-primary-1 xl:mb-4 xl:text-h1">
               浪我包養 - 關於我們的故事
             </h4>
-            <p className="text-primary-3 xl:text-h3 xl:font-bold">
+            <p className="text-fs-6 text-primary-3 xl:text-h3">
               夢想起飛的旅程
             </p>
           </div>
 
           <div className="flex flex-col gap-8 text-grey-2 xl:gap-20">
-            <div className="flex flex-col items-center gap-3 xl:flex-row xl:gap-6">
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
               <div className="flex w-full flex-col gap-3 text-fs-6 xl:w-1/2 xl:gap-4 xl:text-fs-3">
                 <p>
                   浪我包養的故事始於一群心懷熱愛的動物愛好者，我們在一次偶然的聚會中發現,彼此都有著對流浪貓狗的深深關懷。
@@ -108,12 +122,12 @@ export default function About() {
               <div className="w-full xl:w-1/2">
                 <img
                   className="h-40 w-full rounded-xl object-cover xl:h-[480px] xl:rounded-[40px]"
-                  src={IMAGES.ABOUT.ABOUT_STORY1}
+                  src={ASSETS.IMAGES.ABOUT.STORY.STORY_1}
                   alt="關於我們的故事1"
                 />
               </div>
             </div>
-            <div className="flex flex-col items-center gap-3 xl:flex-row-reverse xl:gap-6">
+            <div className="flex flex-col items-center gap-3 sm:flex-row-reverse sm:gap-6">
               <div className="flex w-full flex-col gap-3 text-fs-6 xl:w-1/2 xl:gap-4 xl:text-fs-3">
                 <p>
                   浪初期的日子並不容易，浪我包養的創始團隊租了一個小倉庫作為臨時的收容所，開始收容和照顧街頭的流浪貓狗。
@@ -128,12 +142,12 @@ export default function About() {
               <div className="w-full xl:w-1/2">
                 <img
                   className="h-40 w-full rounded-xl object-cover xl:h-[480px] xl:rounded-[40px]"
-                  src={IMAGES.ABOUT.ABOUT_STORY2}
+                  src={ASSETS.IMAGES.ABOUT.STORY.STORY_2}
                   alt="關於我們的故事2"
                 />
               </div>
             </div>
-            <div className="flex flex-col items-center gap-3 xl:flex-row xl:gap-6">
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
               <div className="flex w-full gap-3 text-fs-6 xl:w-1/2 xl:gap-4 xl:text-fs-3">
                 <p>
                   隨著時間的推移，浪我包養的影響力逐漸擴大，吸引了更多的志工、專業獸醫和動物行為專家的加入。這些專業人士的支持，讓浪我包養能夠提供更高品質的醫療服務和行為矯正。除此之外，線上贊助平台的開設，更是打破了地理的限制，讓世界各地的愛心人士都能參與其中。無論是透過贊助還是現場探訪，大家都能感受到牠們的成長與幸福。
@@ -142,12 +156,12 @@ export default function About() {
               <div className="w-full xl:w-1/2">
                 <img
                   className="h-40 w-full rounded-xl object-cover xl:h-[480px] xl:rounded-[40px]"
-                  src={IMAGES.ABOUT.ABOUT_STORY3}
+                  src={ASSETS.IMAGES.ABOUT.STORY.STORY_3}
                   alt="關於我們的故事3"
                 />
               </div>
             </div>
-            <div className="flex flex-col items-center gap-3 xl:flex-row-reverse xl:gap-6">
+            <div className="flex flex-col items-center gap-3 sm:flex-row-reverse sm:gap-6">
               <div className="flex w-full gap-3 text-fs-6 xl:w-1/2 xl:gap-4 xl:text-fs-3">
                 <p>
                   如今，浪我包養已成為一個充滿愛與希望的地方，每年幫助數百隻流浪貓狗找到幸福的家園。我們的夢想不僅實現了，更在不斷擴大影響力，讓更多的人了解並參與到保護動物的行動中來。未來，我們將繼續努力，為每一隻毛孩子創造更好的生活環境，讓愛與關懷永遠流傳。
@@ -156,61 +170,99 @@ export default function About() {
               <div className="w-full xl:w-1/2">
                 <img
                   className="h-40 w-full rounded-xl object-cover xl:h-[480px] xl:rounded-[40px]"
-                  src={IMAGES.ABOUT.ABOUT_STORY4}
+                  src={ASSETS.IMAGES.ABOUT.STORY.STORY_4}
                   alt="關於我們的故事4"
                 />
               </div>
             </div>
           </div>
         </div>
+
+        <PawsCol className="-bottom-[12px] right-[60px] hidden scale-x-[-1] xl:block" />
+
         <Wave3 className="-bottom-0.5 text-primary-1" />
       </main>
 
-      <section className="overflow-x-hidden bg-primary-1">
+      <section className="relative bg-primary-1">
+        <div className="absolute -top-[140px] right-[120px] z-10">
+          <div className="h-[244px] w-[380px] bg-contain bg-no-repeat xl:bg-aboutCompanion1" />
+        </div>
+
         <div className="px-3 py-10 xl:container xl:py-20">
-          <div className="mb-6 xl:mb-10">
+          <div className="textHighlight beforeDecoration mb-10 ps-4 before:bg-highlight md:mb-[60px] xl:ps-11">
             <h4 className="mb-2 text-2xl font-bold text-white xl:mb-4 xl:text-h1">
               包養我們
             </h4>
             <p className="text-primary-3 xl:text-h3">線上包養或線上捐贈</p>
           </div>
+
           <div className="mx-[25.5px] flex flex-col gap-[60px] md:flex-row">
             <div className="relative z-10 md:w-1/2">
-              <Link
-                to="/adoption"
-                className="absolute inset-0 flex items-center justify-center whitespace-nowrap text-h4 font-bold text-white xl:text-h1"
-              >
-                我要包養
+              <Link to="/adoption" className="group relative block">
+                <div className="absolute inset-0 flex items-center justify-center whitespace-nowrap text-h4 font-bold text-white xl:text-h1">
+                  我要包養
+                </div>
+                <div>
+                  <img
+                    className="h-full w-full"
+                    src={ASSETS.IMAGES.ABOUT.SUPPORT.ADOPT}
+                    alt="我要包養"
+                  />
+
+                  <div className="opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <img
+                      className="absolute inset-0 size-full"
+                      src={ASSETS.IMAGES.ABOUT.SUPPORT.HOVER}
+                      alt="我要包養 hover"
+                    />
+
+                    <div className="bg-doodleUnderline2 absolute bottom-[32.27%] left-1/2 h-[13px] w-[137px] -translate-x-1/2 bg-contain bg-no-repeat xl:bottom-[31.59%] xl:h-[26px] xl:w-[274px]" />
+                  </div>
+                </div>
               </Link>
-              <img
-                className="h-full w-full transition-all duration-300"
-                src={IMAGES.ABOUT.ABOUT_ADOPT}
-                alt="我要包養"
-              />
               <BlobShape />
             </div>
             <div className="relative z-10 md:w-1/2">
-              <Link
-                to="/donation"
-                className="absolute inset-0 flex items-center justify-center whitespace-nowrap text-h4 font-bold text-white xl:text-h1"
-              >
-                我要捐贈&捐款
+              <Link to="/donation" className="group block">
+                <div className="absolute inset-0 flex items-center justify-center whitespace-nowrap text-h4 font-bold text-white xl:text-h1">
+                  我要捐贈&捐款
+                </div>
+                <div>
+                  <img
+                    className="h-full w-full"
+                    src={ASSETS.IMAGES.ABOUT.SUPPORT.DONATION}
+                    alt="我要捐贈&捐款"
+                  />
+                  <div className="opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <img
+                      className="absolute inset-0 h-full w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      src={ASSETS.IMAGES.ABOUT.SUPPORT.HOVER}
+                      alt="我要包養 hover"
+                    />
+
+                    <div className="bg-doodleUnderline2 absolute bottom-[32.27%] left-1/2 h-[13px] w-[137px] -translate-x-1/2 bg-contain bg-no-repeat xl:bottom-[31.59%] xl:h-[26px] xl:w-[274px]" />
+                  </div>
+                </div>
               </Link>
-              <img
-                className="h-full w-full"
-                src={IMAGES.ABOUT.ABOUT_SUPPORT}
-                alt="我要捐贈&捐款"
-              />
               <BlobShape />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative py-[120px]">
+      <section className="relative overflow-hidden py-10 xl:py-[120px]">
         <Wave2 className="top-0 text-primary-1" />
+
+        <div className="absolute bottom-10 left-[112px] -z-10">
+          <div className="h-[284px] w-[224px] bg-aboutCompanion2 bg-contain bg-no-repeat opacity-0 transition-opacity duration-300 3xl:opacity-30 [@media(min-width:1835px)]:opacity-100" />
+        </div>
+
+        <div className="absolute -bottom-[360px] -left-[240px] -z-10">
+          <div className="h-[716px] bg-contain bg-no-repeat xl:w-[700px] xl:bg-aboutShape" />
+        </div>
+
         <div className="px-3 xl:container">
-          <div className="mb-6">
+          <div className="textHighlight beforeDecoration mb-6 ps-4 before:bg-highlight xl:ps-11">
             <h4 className="mb-2 text-h6 font-bold text-primary-1 xl:mb-4 xl:text-h1">
               財務報表
             </h4>
@@ -218,7 +270,7 @@ export default function About() {
               每月誠實、透明的收支明細
             </p>
           </div>
-          <div className="mb-6 flex flex-col gap-2 xl:mb-10 xl:flex-col-reverse xl:gap-5">
+          <div className="mb-6 flex flex-col gap-2 xl:mb-10 xl:flex-col-reverse xl:gap-5 xl:px-[38px]">
             <table className="w-full table-fixed border-separate border-spacing-0 rounded-xl border-2 border-primary-4">
               <thead align="center">
                 <tr className="whitespace-nowrap bg-primary-5 text-h8 text-primary-1 xl:text-h6 [&>th:first-child]:rounded-tl-xl [&>th:last-child]:rounded-tr-xl [&>th]:py-3 xl:[&>th]:py-5">
@@ -266,25 +318,26 @@ export default function About() {
                 ))}
               </tbody>
             </table>
-            <div className="flex flex-col items-end justify-end gap-1 text-fs-7 xl:flex-row xl:gap-10 xl:text-h6 xl:font-bold">
-              <div className="fundStatus before:bg-green-500">
+            <div className="flex flex-col items-end gap-1 text-fs-7 xl:flex-row xl:gap-10 xl:text-h6 xl:font-bold">
+              <div className="fundStatus w-[178px] text-left before:bg-green-500">
                 <p className="text-green-500">資金目前充足，感謝大家</p>
               </div>
-              <div className="fundStatus before:bg-orange-500">
+              <div className="fundStatus w-[178px] text-left before:bg-orange-500">
                 <p className="text-orange-500">尚可度日，可多捐贈物資</p>
               </div>
-              <div className="fundStatus before:bg-red-500">
+              <div className="fundStatus w-[178px] text-left before:bg-red-500">
                 <p className="text-red-500">急需金援</p>
               </div>
             </div>
           </div>
           <Link
-            className="transition-color mx-auto block w-fit rounded-2xl bg-secondary-1 px-[60px] py-4 text-h7 text-white duration-300 hover:bg-secondary-2 xl:px-40 xl:py-6 xl:text-h4"
+            className="mx-auto block w-fit rounded-2xl bg-secondary-1 px-[60px] py-4 text-h7 text-white transition-colors duration-300 hover:bg-secondary-2 xl:px-40 xl:py-6 xl:text-h4"
             to="/donation"
           >
             立即贊助
           </Link>
         </div>
+
         <Wave4 className="-bottom-0.5 text-primary-1" />
       </section>
     </>
