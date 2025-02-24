@@ -1,15 +1,18 @@
-import IMAGES from "@/assets/images";
-import { ScribbleShape1 } from "@/components/decorations/backgrounds/shapes/ScribbleShape";
+import ASSETS from "@/assets";
+import DoodleShape from "@/components/decorative/backgrounds/shapes/doodles/DoodleShape";
 import { Link } from "react-router-dom";
 
 function BannerTitle() {
   return (
     <h3 className="mb-11 flex flex-col items-center gap-y-1 whitespace-nowrap ps-6 text-h3 text-white lg:flex-row xl:mb-20 xl:ps-0 xl:text-h1 xl:leading-normal 3xl:text-heading">
-      <span className="beforeDecoration relative me-24 before:-left-[27px] before:-top-[13px] before:h-[34px] before:w-[45px] before:bg-titlePaw before:bg-cover lg:me-0 before:3xl:-left-[82px] before:3xl:-top-[50px] before:3xl:h-[98px] before:3xl:w-32">
+      <span className="beforeDecoration before:bg-titlePaw relative me-24 before:-left-[27px] before:-top-[13px] before:h-[34px] before:w-[45px] before:bg-cover lg:me-0 before:3xl:-left-[82px] before:3xl:-top-[50px] before:3xl:h-[98px] before:3xl:w-32">
         毛孩子們的
       </span>
-      <span className="afterDecoration relative ms-[108px] after:-bottom-5 after:-left-2 after:h-[19px] after:w-[186px] after:bg-underline after:bg-cover lg:ms-0 after:xl:-bottom-10 after:xl:-left-11 after:xl:h-9 after:xl:w-[380px]">
+      <span className="relative ms-[108px] lg:ms-0">
         夢想樂園
+        <div className="absolute -bottom-5 -left-2 xl:-bottom-10 xl:-left-11">
+          <div className="bg-doodleUnderline1 h-[19px] w-[186px] bg-cover bg-no-repeat xl:h-9 xl:w-[380px]" />
+        </div>
       </span>
     </h3>
   );
@@ -46,10 +49,10 @@ export default function Banner() {
       <div className="relative z-10 mb-6 flex-1 items-center md:mb-0 md:px-0">
         <img
           className="h-auto w-full"
-          src={IMAGES.BANNERS.BANNER_CAT}
+          src={ASSETS.IMAGES.HOME.HOME_HERO}
           alt="cat"
         />
-        <ScribbleShape1 className="-top-[7.32%] left-[2.40%] -z-10 w-[110.29%] text-white opacity-15 md:-top-[4.78%] md:left-[3.97%]" />
+        <DoodleShape className="-top-[7.32%] left-[2.40%] -z-10 w-[110.29%] md:-top-[4.78%] md:left-[3.97%]" />
       </div>
       <BannerContent />
     </div>

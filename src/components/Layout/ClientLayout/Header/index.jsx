@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
-import { Wave1 } from "@/components/decorations";
+import { Wave1 } from "@/components/decorative";
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);

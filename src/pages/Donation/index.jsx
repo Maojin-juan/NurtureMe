@@ -8,7 +8,7 @@ export default function Donation() {
         <meta name="description" content="給予毛孩一份溫暖" />
       </Helmet>
 
-      <section className="relative -mt-[60px] bg-donation_banner bg-cover bg-center before:absolute before:inset-0 before:bg-primary-1 before:opacity-30 xl:mt-0">
+      <section className="bg-donation_banner relative -mt-[60px] bg-cover bg-center before:absolute before:inset-0 before:bg-primary-1 before:opacity-30 xl:mt-0">
         <div className="container relative z-10 pb-[48px] pt-[134px] xl:pb-[160px] xl:pt-[240px]">
           <h5 className="mb-4 text-h5 text-white xl:mb-2 xl:text-heading">
             感謝您的善舉，
@@ -145,7 +145,7 @@ export default function Donation() {
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"
-            tabindex="-1"
+            tabIndex="-1"
             id="dropdown-menu"
           >
             <div className="py-1" role="none">
@@ -154,7 +154,7 @@ export default function Donation() {
                 type="button"
                 className="block w-full px-4 py-2 text-sm text-primary-3 transition-colors duration-200 hover:bg-gray-100"
                 role="menuitem"
-                tabindex="-1"
+                tabIndex="-1"
                 id="menu-item-0"
                 data-target="food_block"
               >
@@ -164,7 +164,7 @@ export default function Donation() {
                 type="button"
                 className="block w-full px-4 py-2 text-sm text-primary-3 transition-colors duration-200 hover:bg-gray-100"
                 role="menuitem"
-                tabindex="-1"
+                tabIndex="-1"
                 id="menu-item-1"
                 data-target="donate_block"
               >
@@ -174,7 +174,7 @@ export default function Donation() {
                 type="button"
                 className="block w-full px-4 py-2 text-sm text-primary-3 transition-colors duration-200 hover:bg-gray-100"
                 role="menuitem"
-                tabindex="-1"
+                tabIndex="-1"
                 id="menu-item-2"
                 data-target="store_block"
               >
@@ -184,7 +184,7 @@ export default function Donation() {
                 type="submit"
                 className="block w-full px-4 py-2 text-sm text-primary-3 transition-colors duration-200 hover:bg-gray-100"
                 role="menuitem"
-                tabindex="-1"
+                tabIndex="-1"
                 id="menu-item-3"
                 data-target="adopt_block"
               >
@@ -283,21 +283,21 @@ export default function Donation() {
             <div className="xl:w-1/2">
               <div className="donation-steps mb-6 flex flex-col gap-[34px] text-fs-3 text-secondary-1 xl:mb-0 xl:h-full xl:justify-between xl:text-fs-1">
                 <div className="step-item relative flex items-center xl:gap-4">
-                  <div className="step-number flex h-[64px] w-[64px] items-center justify-center bg-donation_paw_sm bg-center bg-no-repeat p-4 xl:h-[80px] xl:w-[80px] xl:bg-donation_paw">
+                  <div className="step-number bg-donation_paw_sm xl:bg-donation_paw flex h-[64px] w-[64px] items-center justify-center bg-center bg-no-repeat p-4 xl:h-[80px] xl:w-[80px]">
                     1
                   </div>
                   <p className="text-h7 xl:text-h3">捐款資料及金額</p>
                   <span className="absolute left-[32px] top-full h-[34px] w-[1px] bg-secondary-3 xl:left-10 xl:top-[95px] xl:h-[80px]"></span>
                 </div>
                 <div className="step-item relative flex items-center xl:gap-4">
-                  <div className="step-number flex h-[64px] w-[64px] items-center justify-center bg-donation_paw_sm bg-center bg-no-repeat p-4 xl:h-[80px] xl:w-[80px] xl:bg-donation_paw">
+                  <div className="step-number bg-donation_paw_sm xl:bg-donation_paw flex h-[64px] w-[64px] items-center justify-center bg-center bg-no-repeat p-4 xl:h-[80px] xl:w-[80px]">
                     2
                   </div>
                   <p className="text-h7 xl:text-h3">確認捐款資料</p>
                   <span className="absolute left-[32px] top-full h-[34px] w-[1px] bg-secondary-3 xl:left-10 xl:top-[95px] xl:h-[80px]"></span>
                 </div>
                 <div className="step-item relative flex items-center xl:gap-4">
-                  <div className="step-number flex h-[64px] w-[64px] items-center justify-center bg-donation_paw_sm bg-center bg-no-repeat p-4 xl:h-[80px] xl:w-[80px] xl:bg-donation_paw">
+                  <div className="step-number bg-donation_paw_sm xl:bg-donation_paw flex h-[64px] w-[64px] items-center justify-center bg-center bg-no-repeat p-4 xl:h-[80px] xl:w-[80px]">
                     3
                   </div>
                   <p className="text-h7 xl:text-h3">完成捐贈</p>

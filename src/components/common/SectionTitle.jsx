@@ -6,9 +6,9 @@ export default function SectionTitle({
 }) {
   const getUnderlineClass = () => {
     if (underlineStyle === 1) {
-      return "after:bg-underline1 after:w-80 after:xl:w-[620px]";
+      return "after:bg-underlineWide after:w-80 after:xl:w-[620px]";
     }
-    return "after:bg-underline2 after:w-[186px] after:xl:w-[349px]";
+    return "after:bg-underlineShort after:w-[186px] after:xl:w-[349px]";
   };
 
   return (

@@ -1,16 +1,16 @@
-import IMAGES from "@/assets/images";
+import ASSETS from "@/assets";
 import SectionTitle from "@/components/common/SectionTitle";
-import { Wave2 } from "@/components/decorations";
+import { Wave2 } from "@/components/decorative";
 
 const features = [
   {
-    image: IMAGES.FEATURES.ONLINE_SPONSOR,
+    image: ASSETS.IMAGES.HOME.FEATURES.ONLINE_SPONSOR,
     title: "線上贊助",
     description:
       "選擇你心儀的毛孩子,每月收到牠們的生活更新和可愛照片，感受到牠們的成長與變化。",
   },
   {
-    image: IMAGES.FEATURES.INTERACT,
+    image: ASSETS.IMAGES.HOME.FEATURES.INTERACT,
     title: "現場互動",
     description: "與贊助對象零距離互動，給牠們帶來更多的歡樂和陪伴。",
   },
@@ -38,8 +38,17 @@ export default function Features() {
   return (
     <>
       <Wave2 className="top-0 text-primary-1" />
-      <div className="beforeDecoration afterDecoration relative py-10 before:left-[95px] before:top-[39px] before:-z-10 before:w-[281px] before:bg-contain after:-right-[99px] after:bottom-[190px] after:-z-10 after:h-[270px] after:w-[300px] after:bg-shadow2 after:bg-contain xl:py-[120px] before:xl:h-[925px] before:xl:bg-paw1 after:2xl:-bottom-[220px] after:2xl:-right-[225px] after:2xl:h-[670px] after:2xl:w-[770px]">
-        <div className="beforeDecoration container relative before:-bottom-[90px] before:-right-[208px] before:z-10 before:h-[355px] before:w-[294px] before:3xl:bg-person1">
+
+      <div className="relative py-10 xl:py-[120px]">
+        <div className="absolute left-[95px] top-[39px] -z-10">
+          <div className="h-[925px] w-[281px] bg-contain bg-no-repeat xl:bg-pawsColWide" />
+        </div>
+
+        <div className="absolute -right-[99px] bottom-[190px] -z-10 2xl:-bottom-[220px] 2xl:-right-[225px]">
+          <div className="bg-homeShape1 h-[270px] w-[300px] bg-contain bg-no-repeat 2xl:h-[670px] 2xl:w-[770px]" />
+        </div>
+
+        <div className="beforeDecoration container relative before:-bottom-[90px] before:-right-[208px] before:z-10 before:h-[355px] before:w-[294px] before:3xl:bg-homeCompanion1">
           <SectionTitle
             title="改變生活，從心開始"
             subtitle="讓每個人都能參與到保護毛孩子的行動中來是我們的使命"

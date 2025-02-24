@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { IMAGES } from "@/assets/images";
+import ASSETS from "@/assets";
 
 export default function Logo() {
   return (
@@ -7,7 +7,7 @@ export default function Logo() {
       <Link className="flex h-full items-center" to="/">
         <img
           className="px-px py-1 xl:h-16 xl:px-0.5 xl:py-2"
-          src={IMAGES.ICONS.LOGO}
+          src={ASSETS.ICONS.LOGO}
           alt="HeaderLogo"
         />
       </Link>

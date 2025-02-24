@@ -105,41 +105,73 @@ export default {
       colors,
       backgroundImage: {
         ...Object.fromEntries([
-          // 裝飾元素
+          // 頁面特定背景
           ...Object.entries({
-            // 裝飾 decorations
-            titlePaw: "url('@/assets/decorations/paw/titlePaw.svg')",
-            underline: "url('@/assets/decorations/underline/underline.svg')",
-            underline1: "url('@/assets/decorations/underline/underline1.svg')",
-            underline2: "url('@/assets/decorations/underline/underline2.svg')",
-            baseline: "url('@/assets/decorations/menu/baseline.svg')",
-            paw1: "url('@/assets/decorations/paw/paw1.svg')",
-            paw2: "url('@/assets/decorations/paw/paw2.svg')",
-            hand: "url('@/assets/decorations/guardianHero/hand.svg')",
-            catPaws: "url('@/assets/decorations/guardianHero/catPaws.svg')",
-            arrowPrev: "url('@/assets/decorations/arrow/arrowPrev.svg')",
-            arrowNext: "url('@/assets/decorations/arrow/arrowNext.svg')",
-            aboutAdopt: "url('@/assets/images/about/support/aboutAdopt.svg')",
+            // HOME
+            homeCompanion1:
+              "url('@/assets/decorative/backgrounds/illustrations/companion/home/companion-1.svg')",
+            homeCompanion2:
+              "url('@/assets/decorative/backgrounds/illustrations/companion/home/companion-2.svg')",
+            homeCompanion3:
+              "url('@/assets/decorative/backgrounds/illustrations/companion/home/companion-3.svg')",
+            homeCompanion4:
+              "url('@/assets/decorative/backgrounds/illustrations/companion/home/companion-4.svg')",
+            homeGuardianHeroHand:
+              "url('@/assets/decorative/backgrounds/illustrations/guardian-hero/hand.svg')",
+            homeGuardianHeroPaws:
+              "url('@/assets/decorative/backgrounds/illustrations/guardian-hero/cat-paws.svg')",
+            // arrowPrev: "url('@/assets/decorative/arrow/arrowPrev.svg')",
+            // arrowNext: "url('@/assets/decorative/arrow/arrowNext.svg')",
+            // aboutAdopt: "url('@/assets/images/about/support/aboutAdopt.svg')",
+
+            // ABOUT
+            aboutCompanion1:
+              "url('@/assets/decorative/backgrounds/illustrations/companion/about/companion-1.svg')",
+            aboutCompanion2:
+              "url('@/assets/decorative/backgrounds/illustrations/companion/about/companion-2.svg')",
+            aboutShape:
+              "url('@/assets/decorative/backgrounds/shapes/about/shape.svg')",
+            aboutBanner:
+              "url('@/assets/decorative/backgrounds/banner/about-banner.jpg')",
+
+            // DONATION
           }),
 
-          // 人物插圖
-          ...Array.from({ length: 4 }, (_, i) => [
-            `person${i + 1}`,
-            `url('@/assets/decorations/illust/person${i + 1}.svg')`,
-          ]),
-
-          // 關於我們
+          // 通用裝飾元素
           ...Object.entries({
-            aboutBanner: "url('@/assets/decorations/about/aboutBanner.jpg')",
-          }),
+            // 導航與選單
+            navBaseline:
+              "url('@/assets/decorative/backgrounds/nav/baseline.svg')",
 
-          // 捐贈頁面
-          ...Object.entries({
-            donation_banner:
-              "url('@/assets/images/donation/donation_banner.jpg')",
-            donation_paw: "url('@/assets/images/donation/donation_paw.svg')",
-            donation_paw_sm:
-              "url('@/assets/images/donation/donation_paw_sm.svg')",
+            // 腳印裝飾
+            pawsRow:
+              "url('@/assets/decorative/backgrounds/patterns/paw/paws-row.svg')",
+            pawsColShort:
+              "url('@/assets/decorative/backgrounds/patterns/paw/paws-col-short.svg')",
+            pawsColWide:
+              "url('@/assets/decorative/backgrounds/patterns/paw/paws-col-wide.svg')",
+
+            // 底線裝飾
+            doodleUnderline1:
+              "url('@/assets/decorative/backgrounds/underline/doodle-underline-1.svg')",
+            doodleUnderline2:
+              "url('@/assets/decorative/backgrounds/underline/doodle-underline-2.svg')",
+            underlineShort:
+              "url('@/assets/decorative/backgrounds/underline/underline-short.svg')",
+            underlineWide:
+              "url('@/assets/decorative/backgrounds/underline/underline-wide.svg')",
+
+            // 不規則形裝飾
+            homeShape1:
+              "url('@/assets/decorative/backgrounds/shapes/home/shape-1.svg')",
+            homeShape2:
+              "url('@/assets/decorative/backgrounds/shapes/home/shape-2.svg')",
+
+            // 箭頭導航
+            arrowPrev:
+              "url('@/assets/decorative/backgrounds/arrow/arrow-prev.svg')",
+            arrowNext:
+              "url('@/assets/decorative/backgrounds/arrow/arrow-next.svg')",
           }),
         ]),
       },

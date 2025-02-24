@@ -1,10 +1,10 @@
-import IMAGES from "@/assets/images";
+import ASSETS from "@/assets";
 
 export default function Footer() {
   return (
     <footer className="z-0 mt-auto bg-primary-1">
       <div
-        className={`afterDecoration relative overflow-y-hidden py-10 after:-bottom-[63px] after:right-[86px] after:h-[339px] after:w-[211px] xl:py-20 after:xl:bg-person4`}
+        className={`afterDecoration after:xl:bg-homeCompanion4 relative overflow-y-hidden py-10 after:-bottom-[63px] after:right-[86px] after:h-[339px] after:w-[211px] xl:py-20`}
       >
         <div className="flex flex-col gap-y-10 lg:container lg:flex-row-reverse lg:justify-between">
           <div className="flex flex-col items-center gap-y-4 px-[27.5px] lg:items-end lg:px-0">
@@ -32,7 +32,7 @@ export default function Footer() {
             <a href="/index.html">
               <img
                 className="mx-auto h-16 px-10"
-                src={IMAGES.ICONS.LOGO}
+                src={ASSETS.ICONS.LOGO}
                 alt="FooterLogo"
               />
             </a>
@@ -53,16 +53,16 @@ export default function Footer() {
               <p className="text-h8 text-white xl:text-h6">追蹤我們</p>
               <div className="flex gap-x-4">
                 <a href="#">
-                  <img src={IMAGES.ICONS.SOCIAL.FACEBOOK} alt="FacebookLink" />
+                  <img src={ASSETS.ICONS.SOCIAL.FACEBOOK} alt="FacebookLink" />
                 </a>
                 <a href="#">
                   <img
-                    src={IMAGES.ICONS.SOCIAL.INSTAGRAM}
+                    src={ASSETS.ICONS.SOCIAL.INSTAGRAM}
                     alt="InstagramLink"
                   />
                 </a>
                 <a href="#">
-                  <img src={IMAGES.ICONS.SOCIAL.YOUTUBE} alt="YoutubeLink" />
+                  <img src={ASSETS.ICONS.SOCIAL.YOUTUBE} alt="YoutubeLink" />
                 </a>
               </div>
             </div>
