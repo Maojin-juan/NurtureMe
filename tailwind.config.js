@@ -109,30 +109,25 @@ export default {
           ...Object.entries({
             // HOME
             homeCompanion1:
-              "url('@/assets/decorative/backgrounds/illustrations/companion/home/companion-1.svg')",
+              "url('@/assets/backgrounds/companion/home/companion-1.svg')",
             homeCompanion2:
-              "url('@/assets/decorative/backgrounds/illustrations/companion/home/companion-2.svg')",
+              "url('@/assets/backgrounds/companion/home/companion-2.svg')",
             homeCompanion3:
-              "url('@/assets/decorative/backgrounds/illustrations/companion/home/companion-3.svg')",
+              "url('@/assets/backgrounds/companion/home/companion-3.svg')",
             homeCompanion4:
-              "url('@/assets/decorative/backgrounds/illustrations/companion/home/companion-4.svg')",
+              "url('@/assets/backgrounds/companion/home/companion-4.svg')",
             homeGuardianHeroHand:
-              "url('@/assets/decorative/backgrounds/illustrations/guardian-hero/hand.svg')",
+              "url('@/assets/backgrounds/companion/home/hand.svg')",
             homeGuardianHeroPaws:
-              "url('@/assets/decorative/backgrounds/illustrations/guardian-hero/cat-paws.svg')",
-            // arrowPrev: "url('@/assets/decorative/arrow/arrowPrev.svg')",
-            // arrowNext: "url('@/assets/decorative/arrow/arrowNext.svg')",
-            // aboutAdopt: "url('@/assets/images/about/support/aboutAdopt.svg')",
+              "url('@/assets/backgrounds/companion/home/cat-paws.svg')",
 
             // ABOUT
             aboutCompanion1:
-              "url('@/assets/decorative/backgrounds/illustrations/companion/about/companion-1.svg')",
+              "url('@/assets/backgrounds/companion/about/companion-1.svg')",
             aboutCompanion2:
-              "url('@/assets/decorative/backgrounds/illustrations/companion/about/companion-2.svg')",
-            aboutShape:
-              "url('@/assets/decorative/backgrounds/shapes/about/shape.svg')",
-            aboutBanner:
-              "url('@/assets/decorative/backgrounds/banner/about-banner.jpg')",
+              "url('@/assets/backgrounds/companion/about/companion-2.svg')",
+            aboutShape: "url('@/assets/backgrounds/shapes/about/shape.svg')",
+            aboutBanner: "url('@/assets/backgrounds/banner/about-banner.jpg')",
 
             // DONATION
           }),
@@ -140,38 +135,32 @@ export default {
           // 通用裝飾元素
           ...Object.entries({
             // 導航與選單
-            navBaseline:
-              "url('@/assets/decorative/backgrounds/nav/baseline.svg')",
+            navBaseline: "url('@/assets/backgrounds/nav/baseline.svg')",
 
             // 腳印裝飾
-            pawsRow:
-              "url('@/assets/decorative/backgrounds/patterns/paw/paws-row.svg')",
+            pawsRow: "url('@/assets/backgrounds/patterns/paw/paws-row.svg')",
             pawsColShort:
-              "url('@/assets/decorative/backgrounds/patterns/paw/paws-col-short.svg')",
+              "url('@/assets/backgrounds/patterns/paw/paws-col-short.svg')",
             pawsColWide:
-              "url('@/assets/decorative/backgrounds/patterns/paw/paws-col-wide.svg')",
+              "url('@/assets/backgrounds/patterns/paw/paws-col-wide.svg')",
 
             // 底線裝飾
             doodleUnderline1:
-              "url('@/assets/decorative/backgrounds/underline/doodle-underline-1.svg')",
+              "url('@/assets/backgrounds/underline/doodle-underline-1.svg')",
             doodleUnderline2:
-              "url('@/assets/decorative/backgrounds/underline/doodle-underline-2.svg')",
+              "url('@/assets/backgrounds/underline/doodle-underline-2.svg')",
             underlineShort:
-              "url('@/assets/decorative/backgrounds/underline/underline-short.svg')",
+              "url('@/assets/backgrounds/underline/underline-short.svg')",
             underlineWide:
-              "url('@/assets/decorative/backgrounds/underline/underline-wide.svg')",
+              "url('@/assets/backgrounds/underline/underline-wide.svg')",
 
             // 不規則形裝飾
-            homeShape1:
-              "url('@/assets/decorative/backgrounds/shapes/home/shape-1.svg')",
-            homeShape2:
-              "url('@/assets/decorative/backgrounds/shapes/home/shape-2.svg')",
+            homeShape1: "url('@/assets/backgrounds/shapes/home/shape-1.svg')",
+            homeShape2: "url('@/assets/backgrounds/shapes/home/shape-2.svg')",
 
             // 箭頭導航
-            arrowPrev:
-              "url('@/assets/decorative/backgrounds/arrow/arrow-prev.svg')",
-            arrowNext:
-              "url('@/assets/decorative/backgrounds/arrow/arrow-next.svg')",
+            arrowPrev: "url('@/assets/backgrounds/arrow/arrow-prev.svg')",
+            arrowNext: "url('@/assets/backgrounds/arrow/arrow-next.svg')",
           }),
         ]),
       },

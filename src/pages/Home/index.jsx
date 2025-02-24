@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import Banner from "@/components/Home/Banner";
-import Features from "@/components/Home/Features";
-import Team from "@/components/Home/Team";
-import Story from "@/components/Home/Story";
-import GuardianHero from "@/components/Home/GuardianHero";
+import Banner from "./components/Banner";
+import Features from "./components/Features";
+import Team from "./components/Team";
+import Story from "./components/Story";
+import GuardianHero from "./components/GuardianHero";
 
 export default function Home() {
   return (
