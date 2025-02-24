@@ -62,7 +62,7 @@ export default function TeamSwiper() {
                 <h6 className="mb-3 border-b border-primary-4 pb-3 text-center text-h7 text-primary-1 xl:text-h4">
                   {slide.members}
                 </h6>
-                <p className="text-fs-6 text-primary-3 xl:text-fs-4">
+                <p className="rounded-xl text-fs-6 text-primary-3 xl:text-fs-4">
                   {slide.description}
                 </p>
               </div>
@@ -72,8 +72,8 @@ export default function TeamSwiper() {
         <div className="swiper-pagination !bottom-0 py-1 xl:py-2"></div>
       </div>
       <div className="hidden 3xl:block">
-        <div className="swiper-button-next !-right-14 !top-[175px] !mt-0 !size-20 bg-arrowNext bg-cover after:hidden" />
-        <div className="swiper-button-prev !-left-14 !top-[175px] !mt-0 !size-20 bg-arrowPrev bg-cover after:hidden" />
+        <div className="swiper-button-next !-right-20 !top-[175px] !mt-0 !size-20 bg-arrowNext bg-cover after:hidden" />
+        <div className="swiper-button-prev !-left-20 !top-[175px] !mt-0 !size-20 bg-arrowPrev bg-cover after:hidden" />
       </div>
     </div>
   );
