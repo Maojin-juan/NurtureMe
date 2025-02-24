@@ -19,7 +19,7 @@
     @apply relative block px-6 py-3 transition-all hover:text-white xl:py-3.5;
   }
   .nav-link::after {
-    @apply absolute bottom-2.5 left-0 h-[7px] w-full bg-baseline bg-contain bg-center bg-no-repeat opacity-0 transition-all content-[''] hover:opacity-100 xl:h-2.5;
+    @apply absolute bottom-2.5 left-0 h-[7px] w-full bg-navBaseline bg-contain bg-center bg-no-repeat opacity-0 transition-all content-[''] hover:opacity-100 xl:h-2.5;
   }
 
   /* pseudo-elements */
@@ -97,7 +97,11 @@
     text-orientation: upright;
   }
 
+  .textHighlight {
+    @apply relative before:left-0 before:h-full before:w-2 before:rounded-2xl before:xl:w-4;
+  }
+
   .fundStatus {
-    @apply flex items-center before:block before:size-3 before:rounded-full before:xl:mr-4 before:xl:size-8;
+    @apply flex items-center before:mr-2 before:block before:size-3 before:rounded-full before:xl:mr-4 before:xl:size-8;
   }
 }
