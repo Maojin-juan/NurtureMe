@@ -69,6 +69,24 @@ export default function About() {
     },
   ];
 
+  const fundStatusList = [
+    {
+      status: "充足",
+      message: "資金目前充足，感謝大家",
+      color: "green",
+    },
+    {
+      status: "普通",
+      message: "尚可度日，可多捐贈物資",
+      color: "orange",
+    },
+    {
+      status: "急需",
+      message: "急需金援",
+      color: "red",
+    },
+  ];
+
   return (
     <>
       <Helmet>
@@ -216,7 +234,7 @@ export default function About() {
                       alt="我要包養 hover"
                     />
 
-                    <div className="bg-doodleUnderline2 absolute bottom-[32.27%] left-1/2 h-[13px] w-[137px] -translate-x-1/2 bg-contain bg-no-repeat xl:bottom-[31.59%] xl:h-[26px] xl:w-[274px]" />
+                    <div className="absolute bottom-[32.27%] left-1/2 h-[13px] w-[137px] -translate-x-1/2 bg-doodleUnderline2 bg-contain bg-no-repeat xl:bottom-[31.59%] xl:h-[26px] xl:w-[274px]" />
                   </div>
                 </div>
               </Link>
@@ -240,7 +258,7 @@ export default function About() {
                       alt="我要包養 hover"
                     />
 
-                    <div className="bg-doodleUnderline2 absolute bottom-[32.27%] left-1/2 h-[13px] w-[137px] -translate-x-1/2 bg-contain bg-no-repeat xl:bottom-[31.59%] xl:h-[26px] xl:w-[274px]" />
+                    <div className="absolute bottom-[32.27%] left-1/2 h-[13px] w-[137px] -translate-x-1/2 bg-doodleUnderline2 bg-contain bg-no-repeat xl:bottom-[31.59%] xl:h-[26px] xl:w-[274px]" />
                   </div>
                 </div>
               </Link>
@@ -319,15 +337,14 @@ export default function About() {
               </tbody>
             </table>
             <div className="flex flex-col items-end gap-1 text-fs-7 xl:flex-row xl:gap-10 xl:text-h6 xl:font-bold">
-              <div className="fundStatus w-[178px] text-left before:bg-green-500">
-                <p className="text-green-500">資金目前充足，感謝大家</p>
-              </div>
-              <div className="fundStatus w-[178px] text-left before:bg-orange-500">
-                <p className="text-orange-500">尚可度日，可多捐贈物資</p>
-              </div>
-              <div className="fundStatus w-[178px] text-left before:bg-red-500">
-                <p className="text-red-500">急需金援</p>
-              </div>
+              {fundStatusList.map(({ status, message, color }) => (
+                <div
+                  key={status}
+                  className={`fundStatus w-[178px] text-left xl:w-auto before:bg-${color}-500`}
+                >
+                  <p className={`text-${color}-500`}>{message}</p>
+                </div>
+              ))}
             </div>
           </div>
           <Link
