@@ -13,7 +13,14 @@ import animalData from './animalData.json'
 
 
 export default function Adoption() {
-  
+  //下拉選單
+  const [categoryOpen, setCategoryOpen] = useState(false);
+  const [genderOpen, setGenderOpen] = useState(false);
+
+
+
+
+
   const itemsPerPage = 9; // 每頁顯示 9 張卡片
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -47,14 +54,17 @@ export default function Adoption() {
         <img className="absolute bottom-0" src={wave4} alt="" />
 
 
+        {/* **下拉選單** */}
 
         <section className="container pt-[40px] pb-[50px]">
           <div className="w-[918px] flex justify-between mx-auto mb-[60px]">
             <div className="flex items-center">
               <p className="font-bold text-fs-2 text-primary-1">類別：
               </p>
-              <div>
-              <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="text-primary-2 border-2 border-primary-2 rounded-3xl text-fs-3 py-6 px-10 text-center inline-flex items-center w-[320px] font-bold justify-between hover:bg-primary-2 hover:text-white" type="button">
+              <div className="relative">
+              <button 
+              onClick={() => setCategoryOpen(!categoryOpen)}
+             className="text-primary-2 border-2 border-primary-2 rounded-3xl text-fs-3 py-6 px-10 text-center inline-flex items-center w-[320px] font-bold justify-between hover:bg-primary-2 hover:text-white" type="button">
                 <span>全部 </span>
                 <span className="border border-primary-2  rounded-full items-center justify-center p-2.5">
                   <svg className="w-4 h-4 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -63,22 +73,13 @@ export default function Adoption() {
                 </span>
               </button>
 
-              <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-                    </li>
-                  </ul>
-              </div>
+              {categoryOpen && (
+            
+              <ul className="absolute z-30 mt-2 text-primary-2 rounded-3xl bg-white text-fs-3 text-center w-[320px] font-bold">
+                <li><a href="#" className="rounded block hover:bg-gray-100 hover:rounded-3xl py-3">狗狗</a></li>
+                <li><a href="#" className="block hover:bg-gray-100 hover:rounded-3xl py-3">貓咪</a></li>
+              </ul>
+          )}
               </div>
             </div>
             <div className="flex items-center">
@@ -156,11 +157,11 @@ export default function Adoption() {
           {/* **分頁按鈕** */}
       <div className="flex justify-center items-center mt-6 gap-4">
         <button
-          className={`px-4 py-2 ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-200"}`}
+          className={`px-4 py-2 ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-200 hover:rounded-full"}`}
           onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
         >
-          <img src={arrow_left} alt="" />
+          <img src={arrow_left} alt="Previous Page" />
         </button>
 
         {/* 顯示頁碼按鈕 */}
@@ -175,11 +176,11 @@ export default function Adoption() {
         ))}
 
         <button
-          className={`px-4 py-2 ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-200"}`}
+          className={`px-4 py-2 ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-200 hover:rounded-full"}`}
           onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
           disabled={currentPage === totalPages}
         >
-          <img src={arrow_right} alt="" />
+          <img src={arrow_right} alt="Next Page" />
         </button>
       </div>
         </section>
