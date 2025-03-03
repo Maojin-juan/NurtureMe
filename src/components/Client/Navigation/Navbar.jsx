@@ -1,10 +1,10 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 
 // 視覺組件
-import CartIcon from "../CartIcon";
-import HamburgerButton from "../HamburgerButton";
-import Logo from "../Logo";
-import NavList from "../NavList";
+import CartIcon from "./CartIcon";
+import HamburgerButton from "./HamburgerButton";
+import Logo from "./Logo";
+import NavList from "./NavList";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
