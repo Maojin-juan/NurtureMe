@@ -1,17 +1,29 @@
 import { Helmet} from "react-helmet-async";
 import React from 'react'
+import { useState } from "react"
 import banner from './banner.jpg'
 import BG1 from './BG1.png'
 import BG2 from './BG2.png'
 import BG3 from './BG3.png'
 import wave1 from './waveWhite2.svg'
 import wave4 from './wave4.svg'
+import arrow_left from './Previous.png'
+import arrow_right from './Next.png'
 import animalData from './animalData.json'
 
 
 export default function Adoption() {
   
+  const itemsPerPage = 9; // 每頁顯示 9 張卡片
+  const [currentPage, setCurrentPage] = useState(1);
 
+    // 總頁數
+    const totalPages = Math.ceil(animalData.length / itemsPerPage);
+
+    // 計算當前頁面需要顯示的資料
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const currentData = animalData.slice(startIndex, endIndex);
 
   return (
     <>
@@ -33,7 +45,6 @@ export default function Adoption() {
         <img className="absolute bottom-[-320px] -z-10" src={BG3} alt="" />
         <img className="absolute top-1/2 -translate-y-1/2 right-0 -z-10" src={BG2} alt="" />
         <img className="absolute bottom-0" src={wave4} alt="" />
-
 
 
 
@@ -104,7 +115,7 @@ export default function Adoption() {
           </div>
 
           <div className="container grid grid-cols-12 gap-6">
-            {animalData.map((animal, index) => (
+            {currentData.map((animal, index) => (
               <div key={index} className="hover:border-primary-5 hover:border-4 hover:cursor-pointer  col-span-4 max-w-sm rounded-[20px] overflow-hidden shadow-lg h-[523px] bg-white">
                 <div className="relative">
                   <img className="w-full h-[280px] " src={animal.image} alt={`Image of ${animal.name}`} />
@@ -142,8 +153,40 @@ export default function Adoption() {
               </div>
             ))}
           </div>
+          {/* **分頁按鈕** */}
+      <div className="flex justify-center items-center mt-6 gap-4">
+        <button
+          className={`px-4 py-2 ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-200"}`}
+          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+          disabled={currentPage === 1}
+        >
+          <img src={arrow_left} alt="" />
+        </button>
+
+        {/* 顯示頁碼按鈕 */}
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          <button
+            key={page}
+            className={`px-4 py-2 border rounded-full ${currentPage === page ? "bg-primary-2 text-white" : "hover:bg-gray-200"}`}
+            onClick={() => setCurrentPage(page)}
+          >
+            {page}
+          </button>
+        ))}
+
+        <button
+          className={`px-4 py-2 ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-200"}`}
+          onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+          disabled={currentPage === totalPages}
+        >
+          <img src={arrow_right} alt="" />
+        </button>
+      </div>
         </section>
       </div>
+
+      
+    
     </>
   );
 }
