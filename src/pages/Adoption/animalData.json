@@ -1,0 +1,130 @@
+[
+    {
+      "name": "皮亞傑",
+      "gender": "男生",
+      "age": 8,
+      "breed": "黃金獵犬",
+      "image": "/NurtureMe/src/pages/Adoption/dog1.jpg",
+      "tags": ["下個月生活費", "我還可以再更有錢嗎?"],
+      "sponsorship_progress": 80,
+      "sponsorship": {
+        "amount": 4000,
+        "currency": "NTD",
+        "sponsors": 10
+      }
+    },
+    {
+      "name": "傑佛瑞",
+      "gender": "女生",
+      "age": 3,
+      "breed": "鬥牛犬",
+      "image": "/NurtureMe/src/pages/Adoption/dog2.jpg",
+      "tags": ["下個月生活費", "我還可以再更有錢嗎?"],
+      "sponsorship_progress": 50,
+      "sponsorship": {
+        "amount": 2500,
+        "currency": "NTD",
+        "sponsors": 5
+      }
+    },
+    {
+      "name": "艾瑞克",
+      "gender": "男生",
+      "age": 6,
+      "breed": "德國狼犬",
+      "image": "/NurtureMe/src/pages/Adoption/dog3.jpg",
+      "tags": ["下個月生活費", "嗚嗚,我不可愛嗎?"],
+      "sponsorship_progress": 30,
+      "sponsorship": {
+        "amount": 1500,
+        "currency": "NTD",
+        "sponsors": 3
+      }
+    },
+    {
+      "name": "看啥",
+      "gender": "女生",
+      "age": 2,
+      "breed": "跩貓",
+      "image": "/NurtureMe/src/pages/Adoption/cat1.jpg",
+      "tags": ["下個月生活費", "我還可以再更有錢嗎?"],
+      "sponsorship_progress": 55,
+      "sponsorship": {
+        "amount": 2750,
+        "currency": "NTD",
+        "sponsors": 9
+      }
+    },
+    {
+      "name": "蘿拉",
+      "gender": "女生",
+      "age": 3,
+      "breed": "英國短毛貓",
+      "image": "/NurtureMe/src/pages/Adoption/cat2.jpg",
+      "tags": ["下個月生活費", "謝謝大家的愛戴"],
+      "sponsorship_progress": 90,
+      "sponsorship": {
+        "amount": 4500,
+        "currency": "NTD",
+        "sponsors": 20
+      }
+    },
+    {
+      "name": "喔哈",
+      "gender": "男生",
+      "age": 6,
+      "breed": "暹羅貓",
+      "image": "/NurtureMe/src/pages/Adoption/cat3.jpg",
+      "tags": ["下個月生活費", "謝謝大家的愛戴"],
+      "sponsorship_progress": 95,
+      "sponsorship": {
+        "amount": 4750,
+        "currency": "NTD",
+        "sponsors": 50
+      }
+    },
+    {
+      "name": "跑咩",
+      "gender": "男生",
+      "age": 10,
+      "breed": "邊境牧羊犬",
+      "image": "/NurtureMe/src/pages/Adoption/dog4.png",
+      "tags": ["下個月生活費", "謝謝大家的愛戴"],
+      "sponsorship_progress": 90,
+      "sponsorship": {
+        "amount": 4500,
+        "currency": "NTD",
+        "sponsors": 20
+      }
+    },
+    {
+      "name": "艾許",
+      "gender": "女生",
+      "age": 3,
+      "breed": "豹貓",
+      "image": "/NurtureMe/src/pages/Adoption/cat5.png",
+      "tags": ["下個月生活費", "嗚嗚,我不可愛嗎?"],
+      "sponsorship_progress": 5,
+      "sponsorship": {
+        "amount": 250,
+        "currency": "NTD",
+        "sponsors": 1
+      }
+    },
+    {
+      "name": "皮辜",
+      "gender": "男生",
+      "age": 6,
+      "breed": "拉不拉多",
+      "image": "/NurtureMe/src/pages/Adoption/dog5.jpg",
+      "tags": ["下個月生活費", "謝謝大家的愛戴"],
+      "sponsorship_progress": 95,
+      "sponsorship": {
+        "amount": 4500,
+        "currency": "NTD",
+        "sponsors": 35
+      }
+    }
+    
+  ]
+  

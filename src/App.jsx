@@ -5,7 +5,7 @@ import store from "./store/store";
 import Layout from "@/components/Layout/ClientLayout";
 import Home from "./pages/Home";
 import Donation from "./pages/Donation";
-import Adoption from "./pages/Adoption";
+import Adoption from "./pages/Adoption/index";
 import News from "./pages/News";
 import About from "./pages/About";
 
