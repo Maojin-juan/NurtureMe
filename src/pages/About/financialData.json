@@ -1,0 +1,60 @@
+{
+  "financialData": [
+    {
+      "month": "2024/1",
+      "total": "NTD 98,600",
+      "expense": "NTD 78,600",
+      "balance": "NTD 20,000",
+      "color": "text-red-500"
+    },
+    {
+      "month": "2024/2",
+      "total": "NTD 100,600",
+      "expense": "NTD 70,000",
+      "balance": "NTD 30,600",
+      "color": "text-red-500"
+    },
+    {
+      "month": "2024/3",
+      "total": "NTD 155,000",
+      "expense": "NTD 130,000",
+      "balance": "NTD 25,000",
+      "color": "text-red-500"
+    },
+    {
+      "month": "2024/4",
+      "total": "NTD 120,600",
+      "expense": "NTD 113,000",
+      "balance": "NTD 7,000",
+      "color": "text-red-500"
+    },
+    {
+      "month": "2024/5",
+      "total": "NTD 300,500",
+      "expense": "NTD 250,000",
+      "balance": "NTD 50,500",
+      "color": "text-orange-500"
+    },
+    {
+      "month": "2024/6",
+      "total": "NTD 240,000",
+      "expense": "NTD 140,000",
+      "balance": "NTD 100,000",
+      "color": "text-green-500"
+    },
+    {
+      "month": "2024/7",
+      "total": "NTD 188,600",
+      "expense": "NTD 98,600",
+      "balance": "NTD 90,000",
+      "color": "text-green-500"
+    },
+    {
+      "month": "2024/8",
+      "total": "NTD 366,600",
+      "expense": "NTD 200,600",
+      "balance": "NTD 166,600",
+      "color": "text-green-500"
+    }
+  ]
+}

@@ -8,67 +8,10 @@ import {
   Wave3,
   Wave4,
 } from "@/components/decorative";
+import { DoodleUnderline } from "@/components/decorative/DoodleUnderline";
+import { financialData } from "./financialData.json";
 
 export default function About() {
-  const financialData = [
-    {
-      month: "2024/1",
-      total: "NTD 98,600",
-      expense: "NTD 78,600",
-      balance: "NTD 20,000",
-      color: "text-red-500",
-    },
-    {
-      month: "2024/2",
-      total: "NTD 100,600",
-      expense: "NTD 70,000",
-      balance: "NTD 30,600",
-      color: "text-red-500",
-    },
-    {
-      month: "2024/3",
-      total: "NTD 155,000",
-      expense: "NTD 130,000",
-      balance: "NTD 25,000",
-      color: "text-red-500",
-    },
-    {
-      month: "2024/4",
-      total: "NTD 120,600",
-      expense: "NTD 113,000",
-      balance: "NTD 7,000",
-      color: "text-red-500",
-    },
-    {
-      month: "2024/5",
-      total: "NTD 300,500",
-      expense: "NTD 250,000",
-      balance: "NTD 50,500",
-      color: "text-orange-500",
-    },
-    {
-      month: "2024/6",
-      total: "NTD 240,000",
-      expense: "NTD 140,000",
-      balance: "NTD 100,000",
-      color: "text-green-500",
-    },
-    {
-      month: "2024/7",
-      total: "NTD 188,600",
-      expense: "NTD 98,600",
-      balance: "NTD 90,000",
-      color: "text-green-500",
-    },
-    {
-      month: "2024/8",
-      total: "NTD 366,600",
-      expense: "NTD 200,600",
-      balance: "NTD 166,600",
-      color: "text-green-500",
-    },
-  ];
-
   const fundStatusList = [
     {
       status: "充足",
@@ -108,7 +51,7 @@ export default function About() {
           </div>
         </div>
 
-        <Wave3 className="-bottom-0.5 z-10 text-white" />
+        <Wave3 className="-bottom-px z-10 text-white" />
       </section>
 
       <main className="relative py-10 xl:pb-[120px] xl:pt-20">
@@ -198,7 +141,7 @@ export default function About() {
 
         <PawsCol className="-bottom-[12px] right-[60px] hidden scale-x-[-1] xl:block" />
 
-        <Wave3 className="-bottom-0.5 text-primary-1" />
+        <Wave3 className="-bottom-px text-primary-1" />
       </main>
 
       <section className="relative bg-primary-1">
@@ -234,7 +177,9 @@ export default function About() {
                       alt="我要包養 hover"
                     />
 
-                    <div className="absolute bottom-[32.27%] left-1/2 h-[13px] w-[137px] -translate-x-1/2 bg-doodleUnderline2 bg-contain bg-no-repeat xl:bottom-[31.59%] xl:h-[26px] xl:w-[274px]" />
+                    <div className="absolute bottom-[32.27%] left-1/2 -translate-x-1/2 xl:bottom-[31.59%]">
+                      <DoodleUnderline className="w-[137px] text-primary-4 xl:w-[274px]" />
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -258,7 +203,9 @@ export default function About() {
                       alt="我要包養 hover"
                     />
 
-                    <div className="absolute bottom-[32.27%] left-1/2 h-[13px] w-[137px] -translate-x-1/2 bg-doodleUnderline2 bg-contain bg-no-repeat xl:bottom-[31.59%] xl:h-[26px] xl:w-[274px]" />
+                    <div className="absolute bottom-[32.27%] left-1/2 -translate-x-1/2 xl:bottom-[31.59%]">
+                      <DoodleUnderline className="w-[137px] text-primary-4 xl:w-[274px]" />
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -355,7 +302,7 @@ export default function About() {
           </Link>
         </div>
 
-        <Wave4 className="-bottom-0.5 text-primary-1" />
+        <Wave4 className="-bottom-px text-primary-1" />
       </section>
     </>
   );
