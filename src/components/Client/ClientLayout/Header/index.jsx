@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "../../Navigation/Navbar";
 import { Wave1 } from "@/components/decorative";
 
 export default function Header() {

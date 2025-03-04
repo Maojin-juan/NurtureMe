@@ -11,7 +11,7 @@ function BannerTitle() {
       <span className="relative ms-[108px] lg:ms-0">
         夢想樂園
         <div className="absolute -bottom-5 -left-2 xl:-bottom-10 xl:-left-11">
-          <div className="bg-doodleUnderline1 h-[19px] w-[186px] bg-cover bg-no-repeat xl:h-9 xl:w-[380px]" />
+          <div className="h-[19px] w-[186px] bg-doodleUnderline1 bg-cover bg-no-repeat xl:h-9 xl:w-[380px]" />
         </div>
       </span>
     </h3>
@@ -21,7 +21,7 @@ function BannerTitle() {
 function BannerDescription() {
   return (
     <div className="mx-auto">
-      <div className="px-6 text-fs-6 font-normal text-white md:mx-0 md:max-w-full xl:text-fs-2">
+      <div className="px-6 text-fs-6 font-normal text-white md:mx-0 md:max-w-full md:px-0 md:text-fs-2">
         <div className="beforeDecoration relative space-y-4 ps-5 before:left-0 before:h-full before:w-2 before:rounded-2xl before:bg-primary-2 xl:ps-10 before:xl:w-4">
           <p>
             在浪我包養，我們的願景是為每隻毛孩子打造一個充滿愛與關懷的家園。

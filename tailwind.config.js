@@ -157,6 +157,12 @@ export default {
             // 不規則形裝飾
             homeShape1: "url('@/assets/backgrounds/shapes/home/shape-1.svg')",
             homeShape2: "url('@/assets/backgrounds/shapes/home/shape-2.svg')",
+            storeShape1: "url('@/assets/backgrounds/shapes/store/shape-1.svg')",
+            storeShape2: "url('@/assets/backgrounds/shapes/store/shape-2.svg')",
+
+            // 共用形狀
+            titleShape:
+              "url('@/assets/backgrounds/shapes/common/title-shape.svg')",
 
             // 箭頭導航
             arrowPrev: "url('@/assets/backgrounds/arrow/arrow-prev.svg')",

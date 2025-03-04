@@ -1,5 +1,5 @@
 import { createAxiosInstance } from "./baseInstance";
 
-export const adminAPI = createAxiosInstance({ isAdmin: true });
-export const clientAPI = createAxiosInstance({ isAdmin: false });
-export const authAPI = createAxiosInstance({ isAuth: true });
+export const adminAPI = createAxiosInstance({ requiresAuth: true });
+export const clientAPI = createAxiosInstance({ requiresAuth: false });
+export const authAPI = createAxiosInstance({ requiresAuth: false });

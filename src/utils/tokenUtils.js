@@ -1,17 +1,28 @@
 export const tokenUtils = {
-  getToken: () => {
-    return document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("hexToken="))
-      ?.split("=")[1];
+  getToken() {
+    return localStorage.getItem("token");
   },
 
-  setToken: (token) => {
-    document.cookie = `hexToken=${token}; path=/`;
+  setToken(token) {
+    localStorage.setItem("token", token);
   },
 
-  removeToken: () => {
-    document.cookie =
-      "hexToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  removeToken() {
+    localStorage.removeItem("token");
+  },
+
+  isTokenExpired() {
+    const token = this.getToken();
+    if (!token) return true;
+
+    try {
+      // 解析 JWT token
+      const payload = JSON.parse(atob(token.split(".")[1]));
+      // 檢查是否過期
+      return payload.exp * 1000 < Date.now();
+    } catch (error) {
+      console.error("Token 解析失敗:", error);
+      return true;
+    }
   },
 };

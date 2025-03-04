@@ -31,8 +31,8 @@
   }
 
   /* indexSwiper */
-  .teamSwiper .swiper-pagination-bullet,
-  .storySwiper .swiper-pagination-bullet {
+  .team-swiper .swiper-pagination-bullet,
+  .story-swiper .swiper-pagination-bullet {
     @apply size-2 bg-primary-3 xl:!mx-2 xl:size-4;
   }
 
