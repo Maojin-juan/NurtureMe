@@ -1,10 +1,11 @@
 import ASSETS from "@/assets";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <footer className="z-0 mt-auto bg-primary-1">
       <div
-        className={`afterDecoration after:xl:bg-homeCompanion4 relative overflow-y-hidden py-10 after:-bottom-[63px] after:right-[86px] after:h-[339px] after:w-[211px] xl:py-20`}
+        className={`afterDecoration relative overflow-y-hidden py-10 after:-bottom-[63px] after:right-[86px] after:h-[339px] after:w-[211px] xl:py-20 after:xl:bg-homeCompanion4`}
       >
         <div className="flex flex-col gap-y-10 lg:container lg:flex-row-reverse lg:justify-between">
           <div className="flex flex-col items-center gap-y-4 px-[27.5px] lg:items-end lg:px-0">
@@ -16,12 +17,12 @@ export default function Footer() {
                 id="subscribe"
                 name="subscribe"
               />
-              <input
-                className="rounded-e-2xl bg-secondary-1 px-6 py-4 text-h7 text-white"
+              <button
                 type="button"
-                value="訂閱"
-                name="subscribeButton"
-              />
+                className="whitespace-nowrap rounded-e-2xl bg-secondary-1 px-6 py-4 text-h7 text-white transition-colors duration-300 hover:bg-secondary-2"
+              >
+                訂閱
+              </button>
             </label>
             <div className="lg:vertical-text z-10 flex flex-col items-center text-fs-5 text-white lg:items-start lg:gap-y-3">
               <p>因為有你的包養</p>
@@ -29,13 +30,13 @@ export default function Footer() {
             </div>
           </div>
           <div className="space-y-6 px-[27.5px]">
-            <a href="/index.html">
+            <Link href="/">
               <img
                 className="mx-auto h-16 px-10"
                 src={ASSETS.ICONS.LOGO}
                 alt="FooterLogo"
               />
-            </a>
+            </Link>
             <div className="flex justify-center text-primary-4">
               <address className="text-fs-6 not-italic">
                 <a href="#" className="block">

@@ -45,7 +45,7 @@ export default function Features() {
         </div>
 
         <div className="absolute -right-[99px] bottom-[190px] -z-10 2xl:-bottom-[220px] 2xl:-right-[225px]">
-          <div className="bg-homeShape1 h-[270px] w-[300px] bg-contain bg-no-repeat 2xl:h-[670px] 2xl:w-[770px]" />
+          <div className="h-[270px] w-[300px] bg-homeShape1 bg-contain bg-no-repeat 2xl:h-[670px] 2xl:w-[770px]" />
         </div>
 
         <div className="beforeDecoration container relative before:-bottom-[90px] before:-right-[208px] before:z-10 before:h-[355px] before:w-[294px] before:3xl:bg-homeCompanion1">

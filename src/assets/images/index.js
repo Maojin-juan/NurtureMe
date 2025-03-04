@@ -26,7 +26,11 @@ import pet2 from "./adoption/pet-2.jpg";
 import pet3 from "./adoption/pet-3.jpg";
 
 /* DONATION */
-import adoptImage from "./donation/adopt.jpg";
+import food from "./donation/food.jpg";
+import donate from "./donation/donate.jpg";
+import store from "./donation/store.jpg";
+import adopt from "./donation/adopt.jpg";
+import warm from "./donation/warm.svg";
 
 /* NEWS */
 
@@ -72,6 +76,10 @@ export default {
   },
 
   DONATION: {
-    ADOPT: adoptImage,
+    FOOD: food,
+    DONATE: donate,
+    STORE: store,
+    ADOPT: adopt,
+    WARM: warm,
   },
 };

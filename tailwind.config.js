@@ -130,6 +130,8 @@ export default {
             aboutBanner: "url('@/assets/backgrounds/banner/about-banner.jpg')",
 
             // DONATION
+            donationBanner:
+              "url('@/assets/backgrounds/banner/donation-banner.jpg')",
           }),
 
           // 通用裝飾元素
@@ -143,12 +145,12 @@ export default {
               "url('@/assets/backgrounds/patterns/paw/paws-col-short.svg')",
             pawsColWide:
               "url('@/assets/backgrounds/patterns/paw/paws-col-wide.svg')",
+            homeHeroPaw:
+              "url('@/assets/backgrounds/patterns/paw/home-hero-paw.svg')",
+            donateStepPaw:
+              "url('@/assets/backgrounds/patterns/paw/donate-step-paw.svg')",
 
             // 底線裝飾
-            doodleUnderline1:
-              "url('@/assets/backgrounds/underline/doodle-underline-1.svg')",
-            doodleUnderline2:
-              "url('@/assets/backgrounds/underline/doodle-underline-2.svg')",
             underlineShort:
               "url('@/assets/backgrounds/underline/underline-short.svg')",
             underlineWide:
