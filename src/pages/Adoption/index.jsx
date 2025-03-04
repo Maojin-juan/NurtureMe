@@ -17,8 +17,28 @@ export default function Adoption() {
   const [categoryOpen, setCategoryOpen] = useState(false);
   const [genderOpen, setGenderOpen] = useState(false);
 
+// 篩選條件
+  const [selectedCategory, setSelectedCategory] = useState("全部");
+  const [selectedGender, setSelectedGender] = useState("全部");
+
+  // 處理選擇類別
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    setCategoryOpen(false); // 關閉選單
+  };
 
 
+  // 處理選擇性別
+  const handleGenderChange = (gender) => {
+    setSelectedGender(gender);
+    setGenderOpen(false); // 關閉選單
+  };
+
+  // **篩選動物數據**
+  const filteredData = animalData.filter(animal => {
+    return (selectedCategory === "全部" || animal.category === selectedCategory) &&
+           (selectedGender === "全部" || animal.gender === selectedGender);
+  });
 
 
   const itemsPerPage = 9; // 每頁顯示 9 張卡片
@@ -54,10 +74,12 @@ export default function Adoption() {
         <img className="absolute bottom-0" src={wave4} alt="" />
 
 
-        {/* **下拉選單** */}
-
+       
+        {/* 篩選選單 */}
+        
         <section className="container pt-[40px] pb-[50px]">
           <div className="w-[918px] flex justify-between mx-auto mb-[60px]">
+             {/* **下拉選單** */}
             <div className="flex items-center">
               <p className="font-bold text-fs-2 text-primary-1">類別：
               </p>
@@ -65,7 +87,7 @@ export default function Adoption() {
               <button 
               onClick={() => setCategoryOpen(!categoryOpen)}
              className="text-primary-2 border-2 border-primary-2 rounded-3xl text-fs-3 py-6 px-10 text-center inline-flex items-center w-[320px] font-bold justify-between hover:bg-primary-2 hover:text-white" type="button">
-                <span>全部 </span>
+                <span>{selectedCategory} </span>
                 <span className="border border-primary-2  rounded-full items-center justify-center p-2.5">
                   <svg className="w-4 h-4 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
@@ -75,19 +97,32 @@ export default function Adoption() {
 
               {categoryOpen && (
             
-              <ul className="absolute z-30 mt-2 text-primary-2 rounded-3xl bg-white text-fs-3 text-center w-[320px] font-bold">
-                <li><a href="#" className="rounded block hover:bg-gray-100 hover:rounded-3xl py-3">狗狗</a></li>
-                <li><a href="#" className="block hover:bg-gray-100 hover:rounded-3xl py-3">貓咪</a></li>
-              </ul>
+            <ul className="absolute z-30 mt-2 bg-white text-primary-2 rounded-3xl text-fs-3 text-center w-[320px] font-bold">
+              {["全部", "狗狗", "貓咪"].map((option) => (
+                <li key={option}>
+                  <button
+                    className="block w-full px-4 py-2 hover:bg-gray-200 text-left"
+                    onClick={() => {
+                      setSelectedCategory(option);
+                      setCategoryOpen(false); // 選擇後關閉選單
+                    }}
+                  >
+                    {option}
+                  </button>
+                </li>
+              ))}
+            </ul>
           )}
               </div>
             </div>
             <div className="flex items-center">
               <p className="font-bold text-fs-2 text-primary-1">姓別：
               </p>
-              <div>
-              <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="text-primary-2 border-2 border-primary-2 rounded-3xl text-fs-3 py-6 px-10 text-center inline-flex items-center w-[320px] font-bold justify-between hover:bg-primary-2 hover:text-white" type="button">
-                <span>全部 </span>
+              <div className="relative">
+              <button 
+               onClick={() => setGenderOpen(!genderOpen)}
+               className="text-primary-2 border-2 border-primary-2 rounded-3xl text-fs-3 py-6 px-10 text-center inline-flex items-center w-[320px] font-bold justify-between hover:bg-primary-2 hover:text-white" type="button">
+                <span>{selectedGender} </span>
                 <span className="border border-primary-2  rounded-full items-center justify-center p-2.5">
                   <svg className="w-4 h-4 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
@@ -95,22 +130,23 @@ export default function Adoption() {
                 </span>
               </button>
 
-              <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-                    </li>
-                  </ul>
-              </div>
+              {genderOpen && (
+                   <ul className="absolute z-30 mt-2 bg-white text-primary-2 rounded-3xl text-fs-3 text-center w-[320px] font-bold">
+              {["全部", "弟弟", "妹妹"].map((option) => (
+                <li key={option}>
+                  <button
+                    className="block w-full px-4 py-2 hover:bg-gray-200 text-left"
+                    onClick={() => {
+                      setSelectedGender(option);
+                      setGenderOpen(false); // 選擇後關閉選單
+                    }}
+                  >
+                    {option}
+                  </button>
+                </li>
+              ))}
+            </ul>
+                )}
               </div>
             </div>
           </div>
