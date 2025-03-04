@@ -5,7 +5,7 @@ import ASSETS from "@/assets";
 
 export default function CartIcon() {
   return (
-    <Link to="#" className="flex items-center" aria-label="購物車">
+    <Link to="/cart" className="flex items-center" aria-label="購物車">
       <img src={ASSETS.ICONS.CART} alt="" />
     </Link>
   );
