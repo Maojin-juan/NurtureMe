@@ -33,6 +33,17 @@ import adopt from "./donation/adopt.jpg";
 import warm from "./donation/warm.svg";
 
 /* NEWS */
+import banner from "./adoption/banner.jpg";
+import cat1 from "./adoption/cat1.jpg";
+import cat2 from "./adoption/cat2.jpg";
+import cat3 from "./adoption/cat3.jpg";
+import cat4 from "./adoption/cat4.png";
+import dog1 from "./adoption/dog1.jpg";
+import dog2 from "./adoption/dog2.jpg";
+import dog3 from "./adoption/dog3.jpg";
+import dog4 from "./adoption/dog4.png";
+import dog5 from "./adoption/dog5.jpg";
+
 
 export default {
   HOME: {
@@ -73,6 +84,20 @@ export default {
     PET_1: pet1,
     PET_2: pet2,
     PET_3: pet3,
+    BANNER: banner,
+    CATS: {
+      CAT1: cat1,
+      CAT2: cat2,
+      CAT3: cat3,
+      CAT4: cat4,
+    },
+    DOGS: {
+      DOG1: dog1,
+      DOG2: dog2,
+      DOG3: dog3,
+      DOG4: dog4,
+      DOG5: dog5,
+    }
   },
 
   DONATION: {
@@ -82,4 +107,5 @@ export default {
     ADOPT: adopt,
     WARM: warm,
   },
+
 };

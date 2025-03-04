@@ -4,7 +4,7 @@
       "gender": "男生",
       "age": 8,
       "breed": "黃金獵犬",
-      "image": "/NurtureMe/src/pages/Adoption/dog1.jpg",
+      "image": "/NurtureMe/src/assets/images/adoption/dog1.jpg",
       "tags": ["下個月生活費", "我還可以再更有錢嗎?"],
       "sponsorship_progress": 80,
       "sponsorship": {
@@ -18,7 +18,7 @@
       "gender": "女生",
       "age": 3,
       "breed": "鬥牛犬",
-      "image": "/NurtureMe/src/pages/Adoption/dog2.jpg",
+      "image": "/NurtureMe/src/assets/images/adoption/dog2.jpg",
       "tags": ["下個月生活費", "我還可以再更有錢嗎?"],
       "sponsorship_progress": 50,
       "sponsorship": {
@@ -32,7 +32,7 @@
       "gender": "男生",
       "age": 6,
       "breed": "德國狼犬",
-      "image": "/NurtureMe/src/pages/Adoption/dog3.jpg",
+      "image": "/NurtureMe/src/assets/images/adoption/dog3.jpg",
       "tags": ["下個月生活費", "嗚嗚,我不可愛嗎?"],
       "sponsorship_progress": 30,
       "sponsorship": {
@@ -46,7 +46,7 @@
       "gender": "女生",
       "age": 2,
       "breed": "跩貓",
-      "image": "/NurtureMe/src/pages/Adoption/cat1.jpg",
+      "image": "/NurtureMe/src/assets/images/adoption/cat1.jpg",
       "tags": ["下個月生活費", "我還可以再更有錢嗎?"],
       "sponsorship_progress": 55,
       "sponsorship": {
@@ -60,7 +60,7 @@
       "gender": "女生",
       "age": 3,
       "breed": "英國短毛貓",
-      "image": "/NurtureMe/src/pages/Adoption/cat2.jpg",
+      "image": "/NurtureMe/src/assets/images/adoption/cat2.jpg",
       "tags": ["下個月生活費", "謝謝大家的愛戴"],
       "sponsorship_progress": 90,
       "sponsorship": {
@@ -74,7 +74,7 @@
       "gender": "男生",
       "age": 6,
       "breed": "暹羅貓",
-      "image": "/NurtureMe/src/pages/Adoption/cat3.jpg",
+      "image": "/NurtureMe/src/assets/images/adoption/cat3.jpg",
       "tags": ["下個月生活費", "謝謝大家的愛戴"],
       "sponsorship_progress": 95,
       "sponsorship": {
@@ -88,7 +88,7 @@
       "gender": "男生",
       "age": 10,
       "breed": "邊境牧羊犬",
-      "image": "/NurtureMe/src/pages/Adoption/dog4.png",
+      "image": "/NurtureMe/src/assets/images/adoption/dog4.png",
       "tags": ["下個月生活費", "謝謝大家的愛戴"],
       "sponsorship_progress": 90,
       "sponsorship": {
@@ -102,7 +102,7 @@
       "gender": "女生",
       "age": 3,
       "breed": "豹貓",
-      "image": "/NurtureMe/src/pages/Adoption/cat5.png",
+      "image": "/NurtureMe/src/assets/images/adoption/cat4.png",
       "tags": ["下個月生活費", "嗚嗚,我不可愛嗎?"],
       "sponsorship_progress": 5,
       "sponsorship": {
@@ -116,7 +116,7 @@
       "gender": "男生",
       "age": 6,
       "breed": "拉不拉多",
-      "image": "/NurtureMe/src/pages/Adoption/dog5.jpg",
+      "image": "/NurtureMe/src/assets/images/adoption/dog5.jpg",
       "tags": ["下個月生活費", "謝謝大家的愛戴"],
       "sponsorship_progress": 95,
       "sponsorship": {
@@ -126,11 +126,53 @@
       }
     },
     {
+      "name": "喔哈",
+      "gender": "男生",
+      "age": 6,
+      "breed": "暹羅貓",
+      "image": "/NurtureMe/src/assets/images/adoption/cat3.jpg",
+      "tags": ["下個月生活費", "謝謝大家的愛戴"],
+      "sponsorship_progress": 95,
+      "sponsorship": {
+        "amount": 4750,
+        "currency": "NTD",
+        "sponsors": 50
+      }
+    },
+    {
+      "name": "跑咩",
+      "gender": "男生",
+      "age": 10,
+      "breed": "邊境牧羊犬",
+      "image": "/NurtureMe/src/assets/images/adoption/dog4.png",
+      "tags": ["下個月生活費", "謝謝大家的愛戴"],
+      "sponsorship_progress": 90,
+      "sponsorship": {
+        "amount": 4500,
+        "currency": "NTD",
+        "sponsors": 20
+      }
+    },
+    {
+      "name": "艾許",
+      "gender": "女生",
+      "age": 3,
+      "breed": "豹貓",
+      "image": "/NurtureMe/src/assets/images/adoption/cat4.png",
+      "tags": ["下個月生活費", "嗚嗚,我不可愛嗎?"],
+      "sponsorship_progress": 5,
+      "sponsorship": {
+        "amount": 250,
+        "currency": "NTD",
+        "sponsors": 1
+      }
+    },
+    {
       "name": "皮辜",
       "gender": "男生",
       "age": 6,
       "breed": "拉不拉多",
-      "image": "/NurtureMe/src/pages/Adoption/dog5.jpg",
+      "image": "/NurtureMe/src/assets/images/adoption/dog5.jpg",
       "tags": ["下個月生活費", "謝謝大家的愛戴"],
       "sponsorship_progress": 95,
       "sponsorship": {
@@ -139,6 +181,7 @@
         "sponsors": 35
       }
     }
+
     
   ]
   

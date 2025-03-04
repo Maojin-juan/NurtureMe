@@ -1,10 +1,10 @@
 import { Helmet} from "react-helmet-async";
 import React from 'react'
 import { useState } from "react"
-import banner from './banner.jpg'
-import BG1 from './BG1.png'
-import BG2 from './BG2.png'
-import BG3 from './BG3.png'
+import ASSETS from "@/assets";
+import BG1 from '/NurtureMe/src/assets/images/adoption/BG1.png'
+import BG2 from '/NurtureMe/src/assets/images/adoption/BG2.png'
+import BG3 from '/NurtureMe/src/assets/images/adoption/BG3.png'
 import wave1 from './waveWhite2.svg'
 import wave4 from './wave4.svg'
 import arrow_left from './Previous.png'
@@ -60,7 +60,7 @@ export default function Adoption() {
       </Helmet>
 
       <div className="relative h-[496px] mt-[-80px]">
-        <img className="w-full h-full object-cover " src={banner} alt="" />
+        <img className="w-full h-full object-cover " src={ASSETS.IMAGES.ADOPTION.BANNER} alt="" />
         <img className="absolute bottom-0" src={wave1} alt="" />
         <div className="container">
           <h2 className="absolute top-1/2 text-[80px] font-bold text-white">線上認養</h2>
