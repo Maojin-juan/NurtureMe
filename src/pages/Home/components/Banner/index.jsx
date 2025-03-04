@@ -1,17 +1,18 @@
 import ASSETS from "@/assets";
 import DoodleShape from "@/components/decorative/backgrounds/shapes/doodles/DoodleShape";
+import { DoodleUnderline } from "@/components/decorative/DoodleUnderline";
 import { Link } from "react-router-dom";
 
 function BannerTitle() {
   return (
     <h3 className="mb-11 flex flex-col items-center gap-y-1 whitespace-nowrap ps-6 text-h3 text-white lg:flex-row xl:mb-20 xl:ps-0 xl:text-h1 xl:leading-normal 3xl:text-heading">
-      <span className="beforeDecoration before:bg-titlePaw relative me-24 before:-left-[27px] before:-top-[13px] before:h-[34px] before:w-[45px] before:bg-cover lg:me-0 before:3xl:-left-[82px] before:3xl:-top-[50px] before:3xl:h-[98px] before:3xl:w-32">
+      <span className="beforeDecoration before:bg-homeHeroPaw relative me-24 before:-left-[27px] before:-top-[13px] before:h-[34px] before:w-[45px] before:bg-cover lg:me-0 before:3xl:-left-[82px] before:3xl:-top-[50px] before:3xl:h-[98px] before:3xl:w-32">
         毛孩子們的
       </span>
       <span className="relative ms-[108px] lg:ms-0">
         夢想樂園
         <div className="absolute -bottom-5 -left-2 xl:-bottom-10 xl:-left-11">
-          <div className="h-[19px] w-[186px] bg-doodleUnderline1 bg-cover bg-no-repeat xl:h-9 xl:w-[380px]" />
+          <DoodleUnderline className="w-[186px] text-secondary-2 xl:w-[380px]" />
         </div>
       </span>
     </h3>
@@ -33,7 +34,7 @@ function BannerDescription() {
       </div>
       <div className="mt-6 flex justify-center md:justify-start">
         <Link
-          className="transition-color rounded-2xl bg-secondary-1 px-6 py-4 text-h7 text-white duration-300 hover:bg-secondary-2 2xl:px-10 2xl:py-6 2xl:text-h4"
+          className="rounded-2xl bg-secondary-1 px-6 py-4 text-h7 text-white transition-all duration-150 hover:scale-110 hover:opacity-80 focus:opacity-100 2xl:px-10 2xl:py-6 2xl:text-h4"
           to="/donation"
         >
           立即幫助

@@ -44,7 +44,7 @@ export default function Team() {
       <TeamContent />
       <TeamDescription />
 
-      <Wave3 className="-bottom-0.5 text-primary-1" />
+      <Wave3 className="-bottom-px text-primary-1" />
     </div>
   );
 }

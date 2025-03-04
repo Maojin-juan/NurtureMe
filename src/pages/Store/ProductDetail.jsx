@@ -93,7 +93,7 @@ export default function ProductDetail() {
               />
             </div>
 
-            <Wave3 className="bottom-0 text-white md:hidden" />
+            <Wave3 className="-bottom-px text-white md:hidden" />
 
             <div className="hidden justify-center gap-5 md:flex xl:px-12">
               <img
@@ -222,7 +222,7 @@ export default function ProductDetail() {
         </div>
       </div>
 
-      <Wave4 className="bottom-0 text-primary-1" />
+      <Wave4 className="-bottom-px text-primary-1" />
     </main>
   );
 }

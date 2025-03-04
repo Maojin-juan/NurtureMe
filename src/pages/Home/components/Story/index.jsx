@@ -16,8 +16,8 @@ function StoryButton() {
   return (
     <div className="hidden items-center justify-center 2xl:flex">
       <Link
-        className="inline-block rounded-2xl bg-white px-6 py-4 text-h7 text-primary-2 xl:px-10 xl:py-6 xl:text-h4"
-        to="#"
+        className="inline-block rounded-2xl bg-white px-6 py-4 text-h7 text-primary-2 transition-all duration-150 hover:scale-110 hover:opacity-80 focus:scale-100 xl:px-10 xl:py-6 xl:text-h4"
+        to="/about"
       >
         更多創辦故事
       </Link>
@@ -27,7 +27,7 @@ function StoryButton() {
 
 export default function Story() {
   return (
-    <article className="afterDecoration after:3xl:bg-homeCompanion3 relative space-y-8 bg-primary-1 pb-10 pt-20 after:bottom-[91px] after:right-[78px] after:h-[326px] after:w-[356px] xl:space-y-16 xl:py-20">
+    <article className="afterDecoration relative space-y-8 bg-primary-1 pb-10 pt-20 after:bottom-[91px] after:right-[78px] after:h-[326px] after:w-[356px] xl:space-y-16 xl:py-20 after:3xl:bg-homeCompanion3">
       <StoryContent />
       <StorySwiper />
       <StoryButton />
