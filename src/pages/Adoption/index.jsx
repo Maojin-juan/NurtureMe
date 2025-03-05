@@ -31,6 +31,7 @@ export default function Adoption() {
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
     setCategoryOpen(false); // 關閉選單
+    setCurrentPage(1); // 篩選後回到第 1 頁
   };
 
 
@@ -38,6 +39,7 @@ export default function Adoption() {
   const handleGenderChange = (gender) => {
     setSelectedGender(gender);
     setGenderOpen(false); // 關閉選單
+    setCurrentPage(1); // 篩選後回到第 1 頁
   };
 
 

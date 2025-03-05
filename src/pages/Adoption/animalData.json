@@ -135,63 +135,108 @@
       }
     },
     {
-      "name": "喔哈",
-      "gender": "弟弟",
-      "age": 6,
-      "breed": "暹羅貓",
-      "category": "貓貓",
-      "image": "/NurtureMe/src/assets/images/adoption/cat3.jpg",
-      "tags": ["下個月生活費", "謝謝大家的愛戴"],
-      "sponsorship_progress": 95,
-      "sponsorship": {
-        "amount": 4750,
-        "currency": "NTD",
-        "sponsors": 50
-      }
-    },
-    {
-      "name": "跑咩",
-      "gender": "弟弟",
-      "age": 10,
-      "breed": "邊境牧羊犬",
-      "category": "狗狗",
-      "image": "/NurtureMe/src/assets/images/adoption/dog4.png",
-      "tags": ["下個月生活費", "謝謝大家的愛戴"],
-      "sponsorship_progress": 90,
-      "sponsorship": {
-        "amount": 4500,
-        "currency": "NTD",
-        "sponsors": 20
-      }
-    },
-    {
-      "name": "艾許",
+      "name": "地瓜",
       "gender": "妹妹",
-      "age": 3,
-      "breed": "豹貓",
-      "category": "貓貓",
-      "image": "/NurtureMe/src/assets/images/adoption/cat4.png",
-      "tags": ["下個月生活費", "嗚嗚,我不可愛嗎?"],
-      "sponsorship_progress": 5,
+      "age": 6,
+      "breed": "米克斯",
+      "category": "狗狗",
+      "image": "/NurtureMe/src/assets/images/adoption/dog6.jpg",
+      "tags": ["下個月生活費", "嗚嗚，我不可愛嗎?"],
+      "sponsorship_progress": 10,
       "sponsorship": {
-        "amount": 250,
+        "amount": 500,
         "currency": "NTD",
         "sponsors": 1
       }
     },
     {
-      "name": "皮辜",
-      "gender": "弟弟",
-      "age": 6,
-      "breed": "拉不拉多",
+      "name": "芋頭",
+      "gender": "妹妹",
+      "age": 3,
+      "breed": "蝴蝶犬",
       "category": "狗狗",
-      "image": "/NurtureMe/src/assets/images/adoption/dog5.jpg",
-      "tags": ["下個月生活費", "謝謝大家的愛戴"],
-      "sponsorship_progress": 95,
+      "image": "/NurtureMe/src/assets/images/adoption/dog7.jpeg",
+      "tags": ["下個月生活費", "我還可以再更有錢嗎?"],
+      "sponsorship_progress": 80,
       "sponsorship": {
-        "amount": 4500,
+        "amount": 4000,
         "currency": "NTD",
-        "sponsors": 35
+        "sponsors": 20
+      }
+    },
+    {
+      "name": "小白",
+      "gender": "妹妹",
+      "age": 7,
+      "breed": "米可斯白貓",
+      "category": "貓貓",
+      "image": "/NurtureMe/src/assets/images/adoption/cat5.jpg",
+      "tags": ["下個月生活費", "嗚嗚,我不可愛嗎?"],
+      "sponsorship_progress": 10,
+      "sponsorship": {
+        "amount": 500,
+        "currency": "NTD",
+        "sponsors": 1
+      }
+    },
+    {
+      "name": "柴妹",
+      "gender": "妹妹",
+      "age": 10,
+      "breed": "柴犬",
+      "category": "狗狗",
+      "image": "/NurtureMe/src/assets/images/adoption/dog8.jpg",
+      "tags": ["下個月生活費", "謝謝大家的愛戴"],
+      "sponsorship_progress": 100,
+      "sponsorship": {
+        "amount": 5000,
+        "currency": "NTD",
+        "sponsors": 13
+      }
+    },
+    {
+      "name": "歐歐",
+      "gender": "弟弟",
+      "age": 2,
+      "breed": "台灣土狗",
+      "category": "狗狗",
+      "image": "/NurtureMe/src/assets/images/adoption/dog9.jpg",
+      "tags": ["下個月生活費", "謝謝大家的愛戴"],
+      "sponsorship_progress": 100,
+      "sponsorship": {
+        "amount": 8000,
+        "currency": "NTD",
+        "sponsors": 20
+      }
+    },
+    {
+      "name": "刀疤",
+      "gender": "妹妹",
+      "age": 4,
+      "breed": "米克斯三花貓",
+      "category": "貓貓",
+      "image": "/NurtureMe/src/assets/images/adoption/cat6.jpg",
+      "tags": ["下個月生活費", "嗚嗚,我不可愛嗎?"],
+      "sponsorship_progress": 50,
+      "sponsorship": {
+        "amount": 2500,
+        "currency": "NTD",
+        "sponsors": 1
+      }
+    },
+    {
+      "name": "阿呆",
+      "gender": "妹妹",
+      "age": 6,
+      "breed": "迷你牛頭梗",
+      "category": "狗狗",
+      "image": "/NurtureMe/src/assets/images/adoption/dog10.jpg",
+      "tags": ["下個月生活費", "嗚嗚,我不可愛嗎?"],
+      "sponsorship_progress": 5,
+      "sponsorship": {
+        "amount": 100,
+        "currency": "NTD",
+        "sponsors": 1
       }
     }
 
