@@ -1,18 +1,16 @@
 import { Helmet} from "react-helmet-async";
-import React from 'react'
-import { useState, useEffect, useRef } from "react"
-
+import { useState, useEffect, useRef } from "react";
 import ASSETS from "@/assets";
-import BG1 from '/NurtureMe/src/assets/images/adoption/BG1.png'
-import BG2 from '/NurtureMe/src/assets/images/adoption/BG2.png'
-import BG3 from '/NurtureMe/src/assets/images/adoption/BG3.png'
-import wave1 from './waveWhite2.svg'
-import wave4 from './wave4.svg'
-import waveSM from './wave sm.png'
+import BG1 from '@/assets/images/adoption/BG1.png';
+import BG2 from '@/assets/images/adoption/BG2.png';
+import BG3 from '@/assets/images/adoption/BG3.png';
+import wave1 from './waveWhite2.svg';
+import wave4 from './wave4.svg';
+import waveSM from './wave sm.png';
 
-import arrow_left from './Previous.png'
-import arrow_right from './Next.png'
-import animalData from './animalData.json'
+import arrow_left from './Previous.png';
+import arrow_right from './Next.png';
+import animalData from './animalData.json';
 
 
 export default function Adoption() {
@@ -198,51 +196,75 @@ export default function Adoption() {
           ))}
         </div>
         <div className="flex px-6">
-  <div className="w-full">
-    {/* 進度條外框 */}
-    <div className="w-full bg-gray-300 h-4 rounded-full">
-      {/* 進度條內層，根據 sponsorship_progress 變更顏色 */}
-      <div
-        className={`h-4 rounded-full ${
+        <div className="w-full">
+  {/* 進度條外框 */}
+  <div className="w-full h-4 rounded-full relative overflow-hidden"
+  style={{
+    background: `repeating-linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 0.1) 0px,
+      rgba(0, 0, 0, 0.1) 1px,
+      rgba(255, 255, 255, 0) 2px,
+      rgba(255, 255, 255, 0) 1px 
+    ), #d1d5db`, // 背景色 + 斜線
+  }}>
+    {/* 進度條內層 (底色) */}
+    <div
+      className={`h-4 rounded-full transition-all duration-300 absolute top-0 left-0`}
+      style={{
+        width: `${animal.sponsorship_progress}%`,
+        backgroundColor:
           animal.sponsorship_progress <= 50
-            ? "bg-[#FF3B30]"
+            ? "#FF3B30"
             : animal.sponsorship_progress <= 80
-            ? "bg-[#FF9500]"
-            : "bg-[#34C759]"
-        }`}
-        style={{ width: `${animal.sponsorship_progress}%` }}
-      ></div>
-    </div>
+            ? "#FF9500"
+            : "#34C759",
+      }}
+    ></div>
 
-    {/* 進度條標籤 */}
-    <div className="flex justify-between text-[12px] mt-1">
-      <p
-        className={`${
-          animal.sponsorship_progress <= 50
-            ? "text-[#FF3B30] font-bold"
-            : "text-gray-400"
-        }`}
-      >
-        貧困
-      </p>
-      <p
-        className={`${
-          animal.sponsorship_progress > 50 && animal.sponsorship_progress <= 80
-            ? "text-[#FF9500] font-bold"
-            : "text-gray-400"
-        }`}
-      >
-        小康
-      </p>
-      <p
-        className={`${
-          animal.sponsorship_progress > 80 ? "text-green-500 font-bold" : "text-gray-400"
-        }`}
-      >
-        富足
-      </p>
-    </div>
+    {/* 斜線紋理 (透明疊加) */}
+    <div
+      className="h-4 rounded-full absolute top-0 left-0 w-full"
+      style={{
+        width: `${animal.sponsorship_progress}%`,
+        backgroundImage: `repeating-linear-gradient(
+          -45deg,
+          rgba(255, 255, 255, 0.3) 0px,
+          rgba(255, 255, 255, 0.3) 1px,
+          rgba(255, 255, 255, 0) 2px,
+          rgba(255, 255, 255, 0) 1px
+        )`,
+      }}
+    ></div>
   </div>
+
+  {/* 進度條標籤 */}
+  <div className="flex justify-between text-[12px] mt-1">
+    <p
+      className={`${
+        animal.sponsorship_progress <= 50 ? "text-[#FF3B30] font-bold" : "text-gray-400"
+      }`}
+    >
+      貧困
+    </p>
+    <p
+      className={`${
+        animal.sponsorship_progress > 50 && animal.sponsorship_progress <= 80
+          ? "text-[#FF9500] font-bold"
+          : "text-gray-400"
+      }`}
+    >
+      小康
+    </p>
+    <p
+      className={`${
+        animal.sponsorship_progress > 80 ? "text-green-500 font-bold" : "text-gray-400"
+      }`}
+    >
+      富足
+    </p>
+  </div>
+</div>
 
   {/* 進度百分比數字 */}
   <p className={`text-[20px] leading-6 ps-[23px] ${
