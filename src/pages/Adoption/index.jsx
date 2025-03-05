@@ -8,6 +8,8 @@ import BG2 from '/NurtureMe/src/assets/images/adoption/BG2.png'
 import BG3 from '/NurtureMe/src/assets/images/adoption/BG3.png'
 import wave1 from './waveWhite2.svg'
 import wave4 from './wave4.svg'
+import waveSM from './wave sm.png'
+
 import arrow_left from './Previous.png'
 import arrow_right from './Next.png'
 import animalData from './animalData.json'
@@ -130,7 +132,7 @@ export default function Adoption() {
               {["全部", "狗狗", "貓貓"].map((option) => (
                 <li key={option}>
                   <button
-                    className="block w-full px-4 py-2 hover:bg-gray-200 text-left"
+                    className="block w-full px-4 py-2  text-center hover:bg-gray-200 hover:cursor-pointer hover:rounded-full"
                     onClick={() => handleCategoryChange(option)}
                   >
                     {option}
@@ -161,7 +163,7 @@ export default function Adoption() {
               {["全部", "弟弟", "妹妹"].map((option) => (
                 <li key={option}>
                   <button
-                    className="block w-full px-4 py-2 hover:bg-gray-200 text-left"
+                    className="block w-full px-4 py-2 text-center hover:bg-gray-200 hover:cursor-pointer hover:rounded-full"
                     onClick={() => handleGenderChange(option)}
                   >
                     {option}
@@ -181,33 +183,81 @@ export default function Adoption() {
           <img className="w-full h-[280px]" src={animal.image} alt={`Image of ${animal.name}`} />
           <div className="absolute inset-0 bg-[#27337B99] bg-opacity-50 opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
             <button className="rounded-[24px] bg-white text-primary-2 text-[32px] px-10 py-6 font-bold">
-              點擊查看
+              查看詳情
             </button>
           </div>
+          <img className="absolute bottom-0" src={waveSM} alt="" />
         </div>
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{animal.name}</div>
-          <p className="text-gray-700 text-base">{animal.gender}．{animal.age}歲．{animal.breed}</p>
+        <div className="px-6">
+          <div className="text-primary-1 text-[42px] my-3 font-bold text-xl leading-[48px]">{animal.name}</div>
+          <p className="text-primary-2 text-base text-[24px] leading-[28.8px] font-bold mb-6">{animal.gender}．{animal.age}歲．{animal.breed}</p>
         </div>
         <div className="px-6">
           {animal.tags.map((tag, idx) => (
-            <span key={idx} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{`#${tag}`}</span>
+            <span key={idx} className="inline-block bg-[#FDE3D7] rounded-full px-3 py-1 text-sm  text-secondary-2 mr-2 mb-2">{`#${tag}`}</span>
           ))}
         </div>
         <div className="flex px-6">
-          <div className="w-full bg-gray-300 h-4 rounded-full">
-            <div className="bg-green-500 h-4 rounded-full" style={{ width: `${animal.sponsorship_progress}%` }}></div>
-          </div>
-          <p>{animal.sponsorship_progress}%</p>
-        </div>
-        <div className="flex justify-between px-6">
-          <p>貧困</p>
-          <p>小康</p>
-          <p>富足</p>
-        </div>
-        <div className="flex justify-between px-6 pt-2">
-          <p>NTD {animal.sponsorship.amount}</p>
-          <p>{animal.sponsorship.sponsors}人</p>
+  <div className="w-full">
+    {/* 進度條外框 */}
+    <div className="w-full bg-gray-300 h-4 rounded-full">
+      {/* 進度條內層，根據 sponsorship_progress 變更顏色 */}
+      <div
+        className={`h-4 rounded-full ${
+          animal.sponsorship_progress <= 50
+            ? "bg-[#FF3B30]"
+            : animal.sponsorship_progress <= 80
+            ? "bg-[#FF9500]"
+            : "bg-[#34C759]"
+        }`}
+        style={{ width: `${animal.sponsorship_progress}%` }}
+      ></div>
+    </div>
+
+    {/* 進度條標籤 */}
+    <div className="flex justify-between text-[12px] mt-1">
+      <p
+        className={`${
+          animal.sponsorship_progress <= 50
+            ? "text-[#FF3B30] font-bold"
+            : "text-gray-400"
+        }`}
+      >
+        貧困
+      </p>
+      <p
+        className={`${
+          animal.sponsorship_progress > 50 && animal.sponsorship_progress <= 80
+            ? "text-[#FF9500] font-bold"
+            : "text-gray-400"
+        }`}
+      >
+        小康
+      </p>
+      <p
+        className={`${
+          animal.sponsorship_progress > 80 ? "text-green-500 font-bold" : "text-gray-400"
+        }`}
+      >
+        富足
+      </p>
+    </div>
+  </div>
+
+  {/* 進度百分比數字 */}
+  <p className={`text-[20px] leading-6 ps-[23px] ${
+          animal.sponsorship_progress <= 50
+            ? "text-[#FF3B30]"
+            : animal.sponsorship_progress <= 80
+            ? "text-[#FF9500]"
+            : "text-[#34C759]"
+        }`} >{animal.sponsorship_progress}%</p>
+</div>
+
+        
+        <div className="flex justify-between px-6 pt-2 ">
+          <p className="text-gray-500">NTD {animal.sponsorship.amount}</p>
+          <p className="text-primary-2">{animal.sponsorship.sponsors}人</p>
         </div>
       </div>
     ))}
