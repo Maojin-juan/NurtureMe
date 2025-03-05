@@ -1,6 +1,7 @@
 import { Helmet} from "react-helmet-async";
 import React from 'react'
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
+
 import ASSETS from "@/assets";
 import BG1 from '/NurtureMe/src/assets/images/adoption/BG1.png'
 import BG2 from '/NurtureMe/src/assets/images/adoption/BG2.png'
@@ -21,6 +22,11 @@ export default function Adoption() {
   const [selectedCategory, setSelectedCategory] = useState("全部");
   const [selectedGender, setSelectedGender] = useState("全部");
 
+
+  // 參照下拉選單的容器
+ const categoryRef = useRef(null);
+ const genderRef = useRef(null);
+
   // 處理選擇類別
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
@@ -34,6 +40,28 @@ export default function Adoption() {
     setGenderOpen(false); // 關閉選單
   };
 
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (categoryRef.current && !categoryRef.current.contains(event.target)) {
+        setCategoryOpen(false); // 點擊外部關閉類別選單
+      }
+      if (genderRef.current && !genderRef.current.contains(event.target)) {
+        setGenderOpen(false); // 點擊外部關閉性別選單
+      }
+    };
+
+    // 註冊點擊事件
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // 清理事件
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []); // 空陣列表示僅在組件掛載和卸載時執行
+
+
+
   // **篩選動物數據**
   const filteredData = animalData.filter(animal => {
     return (selectedCategory === "全部" || animal.category === selectedCategory) &&
@@ -41,16 +69,15 @@ export default function Adoption() {
   });
 
 
-  const itemsPerPage = 9; // 每頁顯示 9 張卡片
-  const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 9; // 每頁顯示 9 張卡片
+    const [currentPage, setCurrentPage] = useState(1);
 
     // 總頁數
-    const totalPages = Math.ceil(animalData.length / itemsPerPage);
+    const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 
-    // 計算當前頁面需要顯示的資料
+    // 確保 currentData 來自 filteredData
     const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    const currentData = animalData.slice(startIndex, endIndex);
+    const currentData = filteredData.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <>
@@ -79,11 +106,11 @@ export default function Adoption() {
         
         <section className="container pt-[40px] pb-[50px]">
           <div className="w-[918px] flex justify-between mx-auto mb-[60px]">
-             {/* **下拉選單** */}
+            {/* **下拉選單** */}
             <div className="flex items-center">
               <p className="font-bold text-fs-2 text-primary-1">類別：
               </p>
-              <div className="relative">
+              <div className="relative" ref={categoryRef}>
               <button 
               onClick={() => setCategoryOpen(!categoryOpen)}
              className="text-primary-2 border-2 border-primary-2 rounded-3xl text-fs-3 py-6 px-10 text-center inline-flex items-center w-[320px] font-bold justify-between hover:bg-primary-2 hover:text-white" type="button">
@@ -98,14 +125,11 @@ export default function Adoption() {
               {categoryOpen && (
             
             <ul className="absolute z-30 mt-2 bg-white text-primary-2 rounded-3xl text-fs-3 text-center w-[320px] font-bold">
-              {["全部", "狗狗", "貓咪"].map((option) => (
+              {["全部", "狗狗", "貓貓"].map((option) => (
                 <li key={option}>
                   <button
                     className="block w-full px-4 py-2 hover:bg-gray-200 text-left"
-                    onClick={() => {
-                      setSelectedCategory(option);
-                      setCategoryOpen(false); // 選擇後關閉選單
-                    }}
+                    onClick={() => handleCategoryChange(option)}
                   >
                     {option}
                   </button>
@@ -118,7 +142,7 @@ export default function Adoption() {
             <div className="flex items-center">
               <p className="font-bold text-fs-2 text-primary-1">姓別：
               </p>
-              <div className="relative">
+              <div className="relative" ref={genderRef}>
               <button 
                onClick={() => setGenderOpen(!genderOpen)}
                className="text-primary-2 border-2 border-primary-2 rounded-3xl text-fs-3 py-6 px-10 text-center inline-flex items-center w-[320px] font-bold justify-between hover:bg-primary-2 hover:text-white" type="button">
@@ -136,10 +160,7 @@ export default function Adoption() {
                 <li key={option}>
                   <button
                     className="block w-full px-4 py-2 hover:bg-gray-200 text-left"
-                    onClick={() => {
-                      setSelectedGender(option);
-                      setGenderOpen(false); // 選擇後關閉選單
-                    }}
+                    onClick={() => handleGenderChange(option)}
                   >
                     {option}
                   </button>
@@ -150,46 +171,45 @@ export default function Adoption() {
               </div>
             </div>
           </div>
-
-          <div className="container grid grid-cols-12 gap-6">
-            {currentData.map((animal, index) => (
-              <div key={index} className="hover:border-primary-5 hover:border-4 hover:cursor-pointer  col-span-4 max-w-sm rounded-[20px] overflow-hidden shadow-lg h-[523px] bg-white">
-                <div className="relative">
-                  <img className="w-full h-[280px] " src={animal.image} alt={`Image of ${animal.name}`} />
-                  <div className="absolute inset-0 bg-[#27337B99] bg-opacity-50 opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                  <button className="rounded-[24px] bg-white text-primary-2 text-[32px] px-10 py-6 font-bold">
-                    點擊查看
-                  </button>
-                  </div>
-                </div>
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">{animal.name}</div>
-                  <p className="text-gray-700 text-base">{animal.gender}．{animal.age}歲．{animal.breed}</p>
-                </div>
-                <div className="px-6">
-                  {animal.tags.map((tag, idx) => (
-                    <span key={idx} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{`#${tag}`}</span>
-                  ))}
-                </div>
-                <div className="flex px-6">
-                  <div className="w-full bg-gray-300 h-4 rounded-full">
-                    <div className="bg-green-500 h-4 rounded-full" 
-                    style={{width: `${animal.sponsorship_progress}%`}}></div>
-                  </div>
-                  <p >{animal.sponsorship_progress}%</p>
-                </div>
-                <div className="flex justify-between px-6">
-                  <p>貧困</p>
-                  <p>小康</p>
-                  <p>富足</p>
-                </div>
-                <div className="flex justify-between px-6 pt-2">
-                  <p>NTD {animal.sponsorship.amount}</p>
-                  <p>{animal.sponsorship.sponsors}人</p>
-                </div>
-              </div>
-            ))}
+            {/* **動物卡片** */}
+            <div className="container grid grid-cols-12 gap-6">
+    {currentData.map((animal, index) => (
+      <div key={index} className="hover:border-primary-5 hover:border-4 hover:cursor-pointer col-span-4 max-w-sm rounded-[20px] overflow-hidden shadow-lg h-[523px] bg-white">
+        <div className="relative">
+          <img className="w-full h-[280px]" src={animal.image} alt={`Image of ${animal.name}`} />
+          <div className="absolute inset-0 bg-[#27337B99] bg-opacity-50 opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+            <button className="rounded-[24px] bg-white text-primary-2 text-[32px] px-10 py-6 font-bold">
+              點擊查看
+            </button>
           </div>
+        </div>
+        <div className="px-6 py-4">
+          <div className="font-bold text-xl mb-2">{animal.name}</div>
+          <p className="text-gray-700 text-base">{animal.gender}．{animal.age}歲．{animal.breed}</p>
+        </div>
+        <div className="px-6">
+          {animal.tags.map((tag, idx) => (
+            <span key={idx} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{`#${tag}`}</span>
+          ))}
+        </div>
+        <div className="flex px-6">
+          <div className="w-full bg-gray-300 h-4 rounded-full">
+            <div className="bg-green-500 h-4 rounded-full" style={{ width: `${animal.sponsorship_progress}%` }}></div>
+          </div>
+          <p>{animal.sponsorship_progress}%</p>
+        </div>
+        <div className="flex justify-between px-6">
+          <p>貧困</p>
+          <p>小康</p>
+          <p>富足</p>
+        </div>
+        <div className="flex justify-between px-6 pt-2">
+          <p>NTD {animal.sponsorship.amount}</p>
+          <p>{animal.sponsorship.sponsors}人</p>
+        </div>
+      </div>
+    ))}
+  </div>
           {/* **分頁按鈕** */}
       <div className="flex justify-center items-center mt-6 gap-4">
         <button
