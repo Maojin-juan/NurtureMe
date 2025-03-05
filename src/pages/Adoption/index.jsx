@@ -175,11 +175,11 @@ export default function Adoption() {
           </div>
             {/* **動物卡片** */}
             <div className="container grid grid-cols-12 gap-6">
-    {currentData.map((animal, index) => (
-      <div key={index} className="hover:border-primary-5 hover:border-4 hover:cursor-pointer col-span-4 max-w-sm rounded-[20px] overflow-hidden shadow-lg h-[523px] bg-white">
-        <div className="relative">
-          <img className="w-full h-[280px]" src={animal.image} alt={`Image of ${animal.name}`} />
-          <div className="absolute inset-0 bg-[#27337B99] bg-opacity-50 opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+            {currentData.map((animal, index) => (
+              <div key={index} className="hover:border-primary-5 hover:border-4 hover:cursor-pointer col-span-4 max-w-sm rounded-[20px] overflow-hidden shadow-lg h-[523px] bg-white">
+              <div className="relative">
+              <img className="w-full h-[280px]" src={animal.image} alt={`Image of ${animal.name}`} />
+              <div className="absolute inset-0 bg-[#27337B99] bg-opacity-50 opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
             <button className="rounded-[24px] bg-white text-primary-2 text-[32px] px-10 py-6 font-bold">
               查看詳情
             </button>
@@ -187,8 +187,8 @@ export default function Adoption() {
           <img className="absolute bottom-0" src={waveSM} alt="" />
         </div>
         <div className="px-6">
-          <div className="text-primary-1 text-[42px] my-3 font-bold text-xl leading-[48px]">{animal.name}</div>
-          <p className="text-primary-2 text-base text-[24px] leading-[28.8px] font-bold mb-6">{animal.gender}．{animal.age}歲．{animal.breed}</p>
+          <div className="text-primary-1 text-[42px] my-3 font-bold leading-[48px]">{animal.name}</div>
+          <p className="text-primary-2 text-[24px] leading-[28.8px] font-bold mb-6">{animal.gender}．{animal.age}歲．{animal.breed}</p>
         </div>
         <div className="px-6">
           {animal.tags.map((tag, idx) => (
