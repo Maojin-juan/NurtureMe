@@ -19,7 +19,18 @@ import aboutSupportAdopt from "./about/support/adoption.png";
 import aboutSupportDonation from "./about/support/donation.png";
 import aboutSupportHover from "./about/support/hover.png";
 
-/* ADOPTION */
+/* ADOPTION LIST */
+import banner from "./adoption/banner.jpg";
+import cat1 from "./adoption/cat1.jpg";
+import cat2 from "./adoption/cat2.jpg";
+import cat3 from "./adoption/cat3.jpg";
+import cat4 from "./adoption/cat4.png";
+import dog1 from "./adoption/dog1.jpg";
+import dog2 from "./adoption/dog2.jpg";
+import dog3 from "./adoption/dog3.jpg";
+import dog4 from "./adoption/dog4.png";
+import dog5 from "./adoption/dog5.jpg";
+/* ADOPTION DETAIL */
 import goldenRetriever from "./adoption/golden-retriever.jpg";
 import pet1 from "./adoption/pet-1.jpg";
 import pet2 from "./adoption/pet-2.jpg";
@@ -33,17 +44,9 @@ import adopt from "./donation/adopt.jpg";
 import warm from "./donation/warm.svg";
 
 /* NEWS */
-import banner from "./adoption/banner.jpg";
-import cat1 from "./adoption/cat1.jpg";
-import cat2 from "./adoption/cat2.jpg";
-import cat3 from "./adoption/cat3.jpg";
-import cat4 from "./adoption/cat4.png";
-import dog1 from "./adoption/dog1.jpg";
-import dog2 from "./adoption/dog2.jpg";
-import dog3 from "./adoption/dog3.jpg";
-import dog4 from "./adoption/dog4.png";
-import dog5 from "./adoption/dog5.jpg";
-
+import newsBanner1 from "./news/banner/banner.jpg";
+import newsBanner2 from "./news/banner/feed.jpg";
+import newsBanner3 from "./news/banner/workshop.jpg";
 
 export default {
   HOME: {
@@ -97,7 +100,7 @@ export default {
       DOG3: dog3,
       DOG4: dog4,
       DOG5: dog5,
-    }
+    },
   },
 
   DONATION: {
@@ -108,4 +111,9 @@ export default {
     WARM: warm,
   },
 
+  NEWS: {
+    BANNER_1: newsBanner1,
+    BANNER_2: newsBanner2,
+    BANNER_3: newsBanner3,
+  },
 };

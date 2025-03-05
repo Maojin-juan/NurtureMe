@@ -1,0 +1,28 @@
+{
+  "marqueeItems": [
+    {
+      "id": 1,
+      "title": "支持園區飼料",
+      "image": "/assets/images/news/news_feed.jpg",
+      "alt": "支持園區飼料"
+    },
+    {
+      "id": 2,
+      "title": "新建流浪動物收容所募資進展",
+      "image": "/assets/images/news/news_crowdfunding.jpg",
+      "alt": "新建流浪動物收容所募資進展"
+    },
+    {
+      "id": 3,
+      "title": "浪我包養年末捐款送好禮！",
+      "image": "/assets/images/news/news_presents.jpg",
+      "alt": "浪我包養年末捐款送好禮！"
+    },
+    {
+      "id": 4,
+      "title": "【浪犬「趣」上學】融入新家",
+      "image": "/assets/images/news/news_gotoschool.jpg",
+      "alt": "【浪犬「趣」上學】融入新家"
+    }
+  ]
+}

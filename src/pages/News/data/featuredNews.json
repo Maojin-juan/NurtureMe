@@ -1,0 +1,25 @@
+{
+  "featuredNews": [
+    {
+      "id": 1,
+      "title": "流浪貓咪健康檢查活動",
+      "description": "我們正在籌劃一場針對流浪貓咪的免費健康檢查活動。這次活動將於2024年8月20日在我們的動物...",
+      "image": "/assets/images/news/news_check-up.jpg",
+      "alt": "check-up"
+    },
+    {
+      "id": 2,
+      "title": "支持園區飼料活動",
+      "description": "我們正在籌劃一場大型捐贈飼料的活動。這次活動將於2024年9月20日在我們的動物...",
+      "image": "/assets/images/news/news_feed.jpg",
+      "alt": "delights"
+    },
+    {
+      "id": 3,
+      "title": "群眾募資活動",
+      "description": "一場盛大的群眾募資活動將於2024年10月20日在中央公園，與偶像們攜手響應...",
+      "image": "/assets/images/news/news_crowdfunding.jpg",
+      "alt": "crowdfunding"
+    }
+  ]
+}
