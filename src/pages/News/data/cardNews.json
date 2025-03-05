@@ -1,0 +1,25 @@
+{
+  "cardNews": [
+    {
+      "id": 1,
+      "title": "流浪動物救助社區講座",
+      "description": "我們將於2024年7月20日舉辦一場關於流浪動物救助的社區講座。講座將介紹我們的工作...",
+      "image": "/assets/images/news/news_community.jpg",
+      "alt": "社區講座"
+    },
+    {
+      "id": 2,
+      "title": "「流浪動物與愛心美食」公益活動",
+      "description": "我們將於2024年7月15日舉辦「流浪動物與愛心美食」公益活動，活動將包括義賣和美食攤位...",
+      "image": "/assets/images/news/news_delights.jpg",
+      "alt": "流浪動物與愛心美食公益活動"
+    },
+    {
+      "id": 3,
+      "title": "流浪動物的故事分享會",
+      "description": "我們將於2024年6月20日舉辦一場流浪動物的故事分享會。活動將分享一些感人的流浪動物...",
+      "image": "/assets/images/news/news_workshop.jpg",
+      "alt": "流浪動物的故事分享會"
+    }
+  ]
+}
